@@ -109,6 +109,35 @@ button {
   white-space: nowrap;
 }
 
+/* Badge universal */
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  width: fit-content;
+  margin: 0 auto var(--sp-md);
+  background: rgba(37,211,102,0.1);
+  color: #178a3e;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 7px 16px;
+  border-radius: var(--r-pill);
+  border: 1px solid rgba(37,211,102,0.35);
+  text-transform: uppercase;
+}
+
+.badge--dark {
+  background: rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.82);
+  border-color: rgba(255,255,255,0.22);
+}
+
+.hero__content .badge {
+  margin-left: 0;
+}
+
 /* ═══════════════════════════════════════════
    SCROLL REVEAL (fade-up / left / right / scale)
 ═══════════════════════════════════════════ */
@@ -465,7 +494,7 @@ button {
 
 .hero__headline-highlight {
   display: inline-block;
-  color: var(--c-primary);
+  color: var(--c-secondary);
   white-space: nowrap;
 }
 
@@ -1262,23 +1291,7 @@ button {
   background: linear-gradient(90deg, transparent, rgba(242,107,31,0.8), transparent);
 }
 
-/* Badge */
-.urgencia__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-  background: linear-gradient(135deg, rgba(242,107,31,0.2) 0%, rgba(242,107,31,0.08) 100%);
-  color: #ffb07a;
-  font-size: 0.66rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  padding: 8px 18px;
-  border-radius: var(--r-pill);
-  border: 1px solid rgba(242,107,31,0.4);
-  box-shadow: 0 0 20px rgba(242,107,31,0.2), inset 0 1px 0 rgba(255,255,255,0.1);
-  margin-bottom: var(--sp-md);
-  text-transform: uppercase;
-}
+/* Badge da urgência herda de .badge.badge--dark */
 
 .urgencia__panel h2 {
   font-size: clamp(1.8rem, 3.6vw, 2.5rem);
@@ -1595,6 +1608,7 @@ button {
   margin-bottom: var(--sp-sm);
   letter-spacing: -0.025em;
 }
+
 
 .cta-final__highlight {
   color: var(--c-wpp);
@@ -2296,10 +2310,10 @@ button {
     padding: 32px 20px;
   }
 
-  .urgencia__badge {
+  .badge {
     font-size: 0.59rem;
-    padding: 7px 14px;
-    letter-spacing: 0.1em;
+    padding: 6px 13px;
+    letter-spacing: 0.08em;
   }
 
   .urgencia__panel h2 {
