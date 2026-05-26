@@ -96,7 +96,7 @@ button {
 }
 
 .section-title {
-  font-size: clamp(1.75rem, 4.5vw, 2.6rem);
+  font-size: clamp(2rem, 5.5vw, 3.4rem);
   font-weight: 900;
   color: var(--c-title);
   text-align: center;
@@ -107,6 +107,30 @@ button {
 
 .section-title--nowrap {
   white-space: nowrap;
+}
+
+.section-title--single-line {
+  font-size: clamp(1.9rem, 4.2vw, 3.1rem);
+  white-space: nowrap;
+}
+
+.title-highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.title-highlight--green {
+  color: #25D366;
+  text-shadow: 0 0 40px rgba(37,211,102,0.55), 0 0 80px rgba(37,211,102,0.2);
+}
+
+.title-highlight--red {
+  color: #E53935;
+  text-shadow: 0 0 36px rgba(229,57,53,0.45), 0 0 72px rgba(229,57,53,0.18);
+}
+
+.urgencia .title-highlight--red {
+  color: #FF6B66;
 }
 
 /* Badge universal */
@@ -134,6 +158,12 @@ button {
   border-color: rgba(255,255,255,0.22);
 }
 
+.badge svg {
+  flex-shrink: 0;
+  display: block;
+  stroke-width: 2.2;
+}
+
 .hero__content .badge {
   margin-left: 0;
 }
@@ -146,12 +176,12 @@ button {
 .fade-right,
 .fade-scale {
   opacity: 0;
-  transition: opacity 0.65s cubic-bezier(.22,1,.36,1), transform 0.65s cubic-bezier(.22,1,.36,1);
+  transition: opacity 0.42s ease, transform 0.42s ease;
 }
 
-.fade-up    { transform: translateY(36px); }
-.fade-left  { transform: translateX(-44px); }
-.fade-right { transform: translateX(44px); }
+.fade-up    { transform: translateY(18px); }
+.fade-left  { transform: translateX(-24px); }
+.fade-right { transform: translateX(24px); }
 .fade-scale { transform: scale(0.88); }
 
 .fade-up.is-visible,
@@ -433,7 +463,7 @@ button {
 .hero {
   position: relative;
   font-family: var(--font-display);
-  background: url("banner.jpg") center top / 100% auto no-repeat;
+  background: #fff;
   height: calc(100vw * 900 / 1920);
   padding: clamp(128px, 13vw, 152px) 0 0;
   overflow: hidden;
@@ -697,16 +727,16 @@ button {
 }
 
 .dores::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
-  opacity: 0.035;
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
 .dores > .container { position: relative; z-index: 1; }
+
+.dores .badge {
+  background: rgba(229,57,53,0.1);
+  color: #E53935;
+  border-color: rgba(229,57,53,0.32);
+}
 
 .dores__grid {
   display: grid;
@@ -724,7 +754,7 @@ button {
   padding: 20px var(--sp-md);
   box-shadow: 0 1px 4px rgba(9,58,74,0.05), 0 4px 16px rgba(9,58,74,0.06);
   border: 1px solid rgba(9,58,74,0.06);
-  border-left: 3px solid var(--c-cta);
+  border-left: 3px solid #E53935;
   position: relative;
   overflow: hidden;
   transition: transform 0.3s cubic-bezier(.22,1,.36,1), box-shadow 0.3s ease;
@@ -734,27 +764,31 @@ button {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(242,107,31,0.03) 0%, transparent 40%);
+  background: linear-gradient(90deg, rgba(229,57,53,0.04) 0%, transparent 40%);
   pointer-events: none;
 }
 
 .dor-card:hover {
   transform: translateX(7px);
-  box-shadow: 0 4px 20px rgba(242,107,31,0.12), 0 8px 32px rgba(9,58,74,0.08);
+  box-shadow: 0 4px 20px rgba(229,57,53,0.14), 0 8px 32px rgba(9,58,74,0.08);
 }
 
 .dor-card__icon {
   flex-shrink: 0;
   width: 56px;
   height: 56px;
-  background: linear-gradient(145deg, rgba(242,107,31,0.1) 0%, rgba(242,107,31,0.04) 100%);
+  background: linear-gradient(145deg, rgba(229,57,53,0.1) 0%, rgba(229,57,53,0.04) 100%);
   border-radius: 14px;
-  border: 1px solid rgba(242,107,31,0.1);
+  border: 1px solid rgba(229,57,53,0.12);
   box-shadow: inset 0 1px 0 rgba(255,255,255,0.9);
   display: flex;
   align-items: center;
   justify-content: center;
   transition: transform 0.25s cubic-bezier(.34,1.56,.64,1);
+}
+
+.dor-card__icon svg {
+  stroke: #E53935;
 }
 
 .dor-card:hover .dor-card__icon {
@@ -772,11 +806,11 @@ button {
   text-align: center;
   font-size: 1.05rem;
   font-weight: 700;
-  color: var(--c-primary);
-  background: linear-gradient(135deg, rgba(11,107,122,0.07) 0%, rgba(9,58,74,0.04) 100%);
+  color: #178a3e;
+  background: linear-gradient(135deg, rgba(37,211,102,0.12) 0%, rgba(37,211,102,0.05) 100%);
   padding: var(--sp-md) var(--sp-lg);
   border-radius: var(--r-card);
-  border: 1px solid rgba(11,107,122,0.14);
+  border: 1px solid rgba(37,211,102,0.28);
   position: relative;
   overflow: hidden;
 }
@@ -786,7 +820,7 @@ button {
   position: absolute;
   left: 0; top: 0; bottom: 0;
   width: 4px;
-  background: linear-gradient(180deg, var(--c-primary), rgba(11,107,122,0.3));
+  background: linear-gradient(180deg, #25D366, rgba(37,211,102,0.35));
   border-radius: 0 2px 2px 0;
 }
 
@@ -800,11 +834,7 @@ button {
 }
 
 .beneficios::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 90% 55% at 50% 0%, rgba(11,107,122,0.07) 0%, transparent 68%);
-  pointer-events: none;
+  display: none;
 }
 
 .beneficios__grid {
@@ -894,29 +924,23 @@ button {
 ═══════════════════════════════════════════ */
 .como-funciona {
   padding: var(--sp-xl) 0;
-  background: linear-gradient(140deg, var(--c-secondary) 0%, var(--c-primary) 100%);
+  background: #07234E;
   position: relative;
   overflow: hidden;
 }
 
+.como-funciona .badge {
+  background: rgba(37,211,102,0.12);
+  color: #25D366;
+  border-color: rgba(37,211,102,0.35);
+}
+
 .como-funciona::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-  opacity: 0.03;
-  pointer-events: none;
+  display: none;
 }
 
 .como-funciona::after {
-  content: '';
-  position: absolute;
-  bottom: -80px;
-  right: -80px;
-  width: 380px;
-  height: 380px;
-  background: radial-gradient(circle, rgba(242,107,31,0.14) 0%, transparent 65%);
-  pointer-events: none;
+  display: none;
 }
 
 .passos {
@@ -966,7 +990,7 @@ button {
   flex-shrink: 0;
   width: 50px;
   height: 50px;
-  background: linear-gradient(145deg, var(--c-cta) 0%, var(--c-cta-dark) 100%);
+  background: linear-gradient(145deg, #25D366 0%, #178a3e 100%);
   color: var(--c-white);
   border-radius: 14px;
   display: flex;
@@ -974,7 +998,7 @@ button {
   justify-content: center;
   font-size: 1.05rem;
   font-weight: 900;
-  box-shadow: 0 4px 18px rgba(242,107,31,0.5), inset 0 1px 0 rgba(255,255,255,0.22);
+  box-shadow: 0 4px 18px rgba(37,211,102,0.5), inset 0 1px 0 rgba(255,255,255,0.22);
   letter-spacing: 0.02em;
   position: relative;
   z-index: 1;
@@ -983,7 +1007,7 @@ button {
 
 .passo:hover .passo__num {
   transform: scale(1.1);
-  box-shadow: 0 6px 28px rgba(242,107,31,0.65), inset 0 1px 0 rgba(255,255,255,0.22);
+  box-shadow: 0 6px 28px rgba(37,211,102,0.65), inset 0 1px 0 rgba(255,255,255,0.22);
 }
 
 .passo__body {
@@ -1221,20 +1245,15 @@ button {
 .urgencia {
   position: relative;
   padding: var(--sp-xl) 0;
-  background: linear-gradient(140deg, var(--c-secondary) 0%, var(--c-primary) 100%);
+  background: #07234E;
   overflow: hidden;
 }
 
 .urgencia::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 60% 40% at 80% 10%, rgba(242,107,31,0.12) 0%, transparent 60%);
-  pointer-events: none;
-  z-index: 0;
+  display: none;
 }
 
-.urg-bg { display: block; }
+.urg-bg { display: none; }
 
 .urg-bg__orb {
   position: absolute;
@@ -1274,9 +1293,7 @@ button {
   border-top-color: rgba(255,255,255,0.18);
   border-radius: 28px;
   padding: clamp(32px, 5vw, 56px) clamp(24px, 4vw, 48px);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  box-shadow: 0 32px 80px rgba(0,0,0,0.35), 0 0 0 1px rgba(255,255,255,0.06), inset 0 1px 0 rgba(255,255,255,0.12);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.24), 0 0 0 1px rgba(255,255,255,0.06), inset 0 1px 0 rgba(255,255,255,0.12);
   position: relative;
   overflow: hidden;
 }
@@ -1288,14 +1305,20 @@ button {
   transform: translateX(-50%);
   width: 60%;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(242,107,31,0.8), transparent);
+  background: linear-gradient(90deg, transparent, rgba(229,57,53,0.8), transparent);
 }
 
 /* Badge da urgência herda de .badge.badge--dark */
 
+.urgencia .badge {
+  background: rgba(229,57,53,0.12);
+  color: #FF6B66;
+  border-color: rgba(229,57,53,0.35);
+}
+
 .urgencia__panel h2 {
-  font-size: clamp(1.8rem, 3.6vw, 2.5rem);
-  font-weight: 800;
+  font-size: clamp(2rem, 5.5vw, 3.4rem);
+  font-weight: 900;
   color: #ffffff;
   line-height: 1.12;
   margin-bottom: var(--sp-sm);
@@ -1365,14 +1388,14 @@ button {
   flex-direction: column;
   align-items: center;
   background: linear-gradient(175deg, rgba(255,255,255,0.1) 0%, rgba(4,30,48,0.7) 100%);
-  border: 1px solid rgba(242,107,31,0.35);
+  border: 1px solid rgba(229,57,53,0.38);
   border-top-color: rgba(255,255,255,0.2);
   border-radius: 18px;
   padding: 20px 8px 14px;
   min-width: 92px;
   box-shadow:
-    0 0 0 1px rgba(242,107,31,0.12),
-    0 0 30px rgba(242,107,31,0.12),
+    0 0 0 1px rgba(229,57,53,0.13),
+    0 0 30px rgba(229,57,53,0.13),
     0 16px 40px rgba(0,0,0,0.3),
     inset 0 1px 0 rgba(255,255,255,0.15);
   position: relative;
@@ -1385,7 +1408,7 @@ button {
   position: absolute;
   bottom: 0; left: 0; right: 0;
   height: 3px;
-  background: linear-gradient(90deg, transparent, rgba(242,107,31,0.7), transparent);
+  background: linear-gradient(90deg, transparent, rgba(229,57,53,0.75), transparent);
   border-radius: 0 0 18px 18px;
 }
 
@@ -1415,7 +1438,7 @@ button {
   font-size: 0.52rem;
   font-weight: 800;
   letter-spacing: 0.16em;
-  color: rgba(242,107,31,0.75);
+  color: rgba(255,107,102,0.9);
   text-transform: uppercase;
   line-height: 1;
 }
@@ -1423,9 +1446,9 @@ button {
 .countdown__sep {
   font-size: 2rem;
   font-weight: 900;
-  color: rgba(242,107,31,0.6);
+  color: rgba(255,107,102,0.75);
   margin-bottom: 14px;
-  text-shadow: 0 0 20px rgba(242,107,31,0.4);
+  text-shadow: 0 0 20px rgba(229,57,53,0.45);
   flex-shrink: 0;
 }
 
@@ -1439,11 +1462,7 @@ button {
 }
 
 .faq::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(11,107,122,0.05) 0%, transparent 70%);
-  pointer-events: none;
+  display: none;
 }
 
 .faq__list {
@@ -1464,15 +1483,15 @@ button {
 }
 
 .faq__item:hover {
-  border-color: rgba(11,107,122,0.2);
+  border-color: rgba(37,211,102,0.28);
   transform: translateX(3px);
 }
 
 .faq__item.is-open {
   box-shadow: 0 4px 18px rgba(9,58,74,0.08), 0 16px 32px rgba(9,58,74,0.05);
-  border-color: rgba(11,107,122,0.3);
+  border-color: rgba(37,211,102,0.38);
   border-left-width: 3px;
-  border-left-color: var(--c-primary);
+  border-left-color: #25D366;
   transform: none;
 }
 
@@ -1491,30 +1510,30 @@ button {
 }
 
 .faq__btn:hover {
-  background: rgba(11,107,122,0.03);
+  background: rgba(37,211,102,0.04);
 }
 
 .faq__item.is-open .faq__btn {
-  color: var(--c-primary);
-  background: rgba(11,107,122,0.03);
+  color: #178a3e;
+  background: rgba(37,211,102,0.04);
 }
 
 .faq__chevron {
   flex-shrink: 0;
   width: 22px;
   height: 22px;
-  background: rgba(11,107,122,0.08);
+  background: rgba(37,211,102,0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--c-primary);
+  color: #178a3e;
   transition: transform 0.32s cubic-bezier(.22,1,.36,1), background 0.2s ease;
 }
 
 .faq__item.is-open .faq__chevron {
   transform: rotate(180deg);
-  background: rgba(11,107,122,0.12);
+  background: rgba(37,211,102,0.16);
 }
 
 .faq__panel {
@@ -1541,12 +1560,12 @@ button {
   font-size: 0.88rem;
   color: var(--c-body);
   line-height: 1.75;
-  border-top: 1px solid rgba(11,107,122,0.07);
+  border-top: 1px solid rgba(37,211,102,0.16);
   padding-top: var(--sp-sm);
 }
 
 .faq__panel a {
-  color: var(--c-primary);
+  color: #178a3e;
   font-weight: 600;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -1554,7 +1573,7 @@ button {
 }
 
 .faq__panel a:hover {
-  color: var(--c-cta);
+  color: #25D366;
 }
 
 /* ═══════════════════════════════════════════
@@ -1562,15 +1581,13 @@ button {
 ═══════════════════════════════════════════ */
 .cta-final {
   padding: var(--sp-xl) 0;
-  background: linear-gradient(140deg, var(--c-secondary) 0%, var(--c-primary) 100%);
+  background: #07234E;
   position: relative;
   overflow: hidden;
 }
 
 .cta-final__orb {
-  position: absolute;
-  border-radius: 50%;
-  pointer-events: none;
+  display: none;
 }
 
 .cta-final__orb--1 {
@@ -1598,6 +1615,12 @@ button {
   margin: 0 auto;
   position: relative;
   z-index: 1;
+}
+
+.cta-final .badge {
+  background: rgba(37,211,102,0.12);
+  color: #25D366;
+  border-color: rgba(37,211,102,0.35);
 }
 
 .cta-final__inner h2 {
@@ -1679,7 +1702,7 @@ button {
 ═══════════════════════════════════════════ */
 .footer {
   padding: 28px 0;
-  background: #020b10;
+  background: #092755;
   border-top: 1px solid rgba(255,255,255,0.06);
 }
 
@@ -1937,9 +1960,11 @@ button {
   height: 2px;
   z-index: 100000;
   background: linear-gradient(90deg, var(--c-cta), var(--c-primary));
-  width: 0%;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left center;
   pointer-events: none;
-  transition: width 0.08s linear;
+  will-change: transform;
 }
 
 /* Ripple */
@@ -2007,7 +2032,7 @@ button {
 
 .dor-card:hover .dor-card__icon {
   transform: scale(1.1);
-  background: rgba(242,107,31,0.15);
+  background: rgba(229,57,53,0.15);
 }
 
 /* Cards de depoimento no mobile */
@@ -2027,7 +2052,7 @@ button {
 
 .passo:hover .passo__num {
   transform: scale(1.12);
-  box-shadow: 0 6px 26px rgba(242,107,31,0.6);
+  box-shadow: 0 6px 26px rgba(37,211,102,0.65);
 }
 
 /* Google summary hover */
@@ -2042,7 +2067,7 @@ button {
 
 /* FAQ item hover melhorado */
 .faq__item:not(.is-open):hover {
-  border-color: rgba(11,107,122,0.22);
+  border-color: rgba(37,211,102,0.3);
   box-shadow: var(--sh-sm);
 }
 
@@ -2052,7 +2077,7 @@ button {
 }
 
 .dores__fechamento:hover {
-  background: rgba(11,107,122,0.1);
+  background: rgba(37,211,102,0.14);
   box-shadow: var(--sh-sm);
   transform: translateY(-2px);
 }
@@ -2076,6 +2101,24 @@ button {
   }
   .countdown__num.is-flipping {
     animation: none;
+  }
+}
+
+@media (max-width: 899px) {
+  .fade-up,
+  .fade-left,
+  .fade-right,
+  .fade-scale {
+    transition-duration: 0.28s;
+  }
+
+  .dor-card:hover,
+  .passo:hover,
+  .faq__item:hover,
+  .depo-card:hover,
+  .google-summary:hover,
+  .dores__fechamento:hover {
+    transform: none;
   }
 }
 
@@ -2251,12 +2294,17 @@ button {
   }
 
   .section-title {
-    font-size: clamp(1.55rem, 7vw, 2.1rem);
+    font-size: clamp(1.7rem, 8vw, 2.25rem);
     line-height: 1.16;
     margin-bottom: 28px;
   }
 
   .section-title--nowrap {
+    white-space: normal;
+  }
+
+  .section-title--single-line {
+    font-size: clamp(1.45rem, 6.3vw, 2rem);
     white-space: normal;
   }
 
@@ -2317,7 +2365,7 @@ button {
   }
 
   .urgencia__panel h2 {
-    font-size: clamp(1.65rem, 7.5vw, 2.2rem);
+    font-size: clamp(1.7rem, 8vw, 2.25rem);
     line-height: 1.14;
   }
 

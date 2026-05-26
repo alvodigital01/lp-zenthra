@@ -265,12 +265,20 @@
 (function initHeader() {
   var header = document.querySelector('.site-header');
   if (!header) return;
+  var ticking = false;
 
   function update() {
     header.classList.toggle('is-scrolled', window.scrollY > 50);
+    ticking = false;
   }
 
-  window.addEventListener('scroll', update, { passive: true });
+  function requestUpdate() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(update);
+  }
+
+  window.addEventListener('scroll', requestUpdate, { passive: true });
   update();
 })();
 
@@ -287,10 +295,20 @@
     var scrolled = window.scrollY;
     var total = document.documentElement.scrollHeight - window.innerHeight;
     if (total <= 0) return;
-    bar.style.width = (scrolled / total * 100) + '%';
+    bar.style.transform = 'scaleX(' + (scrolled / total) + ')';
   }
 
-  window.addEventListener('scroll', update, { passive: true });
+  var ticking = false;
+  function requestUpdate() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function() {
+      update();
+      ticking = false;
+    });
+  }
+
+  window.addEventListener('scroll', requestUpdate, { passive: true });
   update();
 })();
 
@@ -327,7 +345,7 @@
   grids.forEach(function(grid) {
     var items = grid.querySelectorAll('.fade-up');
     items.forEach(function(item, i) {
-      item.style.transitionDelay = (i * 0.1) + 's';
+      item.style.transitionDelay = (i * 0.04) + 's';
     });
   });
 })();
@@ -378,14 +396,22 @@
   if (!fab) return;
 
   var visible = false;
+  var ticking = false;
 
   function update() {
     var shouldShow = window.scrollY > 400;
+    ticking = false;
     if (shouldShow === visible) return;
     visible = shouldShow;
     fab.style.opacity    = visible ? '1' : '0';
     fab.style.transform  = visible ? 'scale(1)' : 'scale(0.8)';
     fab.style.pointerEvents = visible ? 'auto' : 'none';
+  }
+
+  function requestUpdate() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(update);
   }
 
   /* Estilo inicial (invisível no topo, sem flash) */
@@ -394,6 +420,6 @@
   fab.style.transform    = 'scale(0.8)';
   fab.style.pointerEvents = 'none';
 
-  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('scroll', requestUpdate, { passive: true });
   update();
 })();
