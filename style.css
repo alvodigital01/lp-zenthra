@@ -52,6 +52,8 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   font-size: 16px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -60,6 +62,7 @@ body {
   background: var(--c-bg);
   line-height: 1.65;
   overflow-x: hidden;
+  max-width: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -93,6 +96,7 @@ button {
   max-width: var(--max-w);
   margin: 0 auto;
   padding: 0 var(--pad);
+  min-width: 0;
 }
 
 .section-title {
@@ -103,6 +107,8 @@ button {
   line-height: 1.12;
   letter-spacing: -0.025em;
   margin-bottom: var(--sp-lg);
+  max-width: 100%;
+  overflow-wrap: break-word;
 }
 
 .section-title--nowrap {
@@ -444,14 +450,6 @@ button {
   }
 
   .site-header__cta {
-    flex-shrink: 0;
-    padding: 10px 12px;
-    font-size: 0.62rem;
-    letter-spacing: 0.02em;
-    gap: 0;
-  }
-
-  .site-header__cta svg {
     display: none;
   }
 }
@@ -524,7 +522,8 @@ button {
 
 .hero__headline-highlight {
   display: inline-block;
-  color: var(--c-secondary);
+  color: #25D366;
+  text-shadow: 0 0 40px rgba(37,211,102,0.55), 0 0 80px rgba(37,211,102,0.2);
   white-space: nowrap;
 }
 
@@ -800,6 +799,8 @@ button {
   font-weight: 600;
   color: var(--c-title);
   line-height: 1.5;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .dores__fechamento {
@@ -1013,6 +1014,7 @@ button {
 .passo__body {
   position: relative;
   z-index: 1;
+  min-width: 0;
 }
 
 .passo__body h3 {
@@ -1027,6 +1029,7 @@ button {
   font-size: 0.88rem;
   color: rgba(255,255,255,0.75);
   line-height: 1.65;
+  overflow-wrap: anywhere;
 }
 
 .passo__conector {
@@ -1288,24 +1291,17 @@ button {
 
 /* Glass panel container */
 .urgencia__panel {
-  background: linear-gradient(160deg, rgba(255,255,255,0.065) 0%, rgba(255,255,255,0.02) 100%);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-top-color: rgba(255,255,255,0.18);
-  border-radius: 28px;
-  padding: clamp(32px, 5vw, 56px) clamp(24px, 4vw, 48px);
-  box-shadow: 0 18px 44px rgba(0,0,0,0.24), 0 0 0 1px rgba(255,255,255,0.06), inset 0 1px 0 rgba(255,255,255,0.12);
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .urgencia__panel::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 50%;
-  transform: translateX(-50%);
-  width: 60%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(229,57,53,0.8), transparent);
+  display: none;
 }
 
 /* Badge da urgência herda de .badge.badge--dark */
@@ -2243,16 +2239,27 @@ button {
   }
 
   .hero {
-    min-height: 560px;
+    min-height: auto;
     height: auto;
-    padding: 92px 0 34px;
+    padding: 92px 0 48px;
     background-size: auto 100%;
     background-position: 58% top;
   }
 
+  .hero__inner {
+    align-items: center;
+  }
+
   .hero__content {
-    width: min(100%, 340px);
-    max-width: 340px;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero__content .badge {
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero__headline {
@@ -2269,7 +2276,9 @@ button {
     font-size: 0.92rem;
     line-height: 1.55;
     margin-bottom: 20px;
-    max-width: 300px;
+    max-width: 330px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero__subheadline br {
@@ -2287,16 +2296,22 @@ button {
   }
 
   .hero__microcopy {
-    max-width: 300px;
-    align-items: flex-start;
+    max-width: 330px;
+    align-items: center;
+    justify-content: center;
     font-size: 0.76rem;
     line-height: 1.35;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .section-title {
-    font-size: clamp(1.7rem, 8vw, 2.25rem);
+    font-size: clamp(1.45rem, 6.4vw, 1.95rem);
     line-height: 1.16;
     margin-bottom: 28px;
+    max-width: min(100%, 320px);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .section-title--nowrap {
@@ -2304,7 +2319,7 @@ button {
   }
 
   .section-title--single-line {
-    font-size: clamp(1.45rem, 6.3vw, 2rem);
+    font-size: clamp(1.32rem, 5.9vw, 1.78rem);
     white-space: normal;
   }
 
@@ -2323,6 +2338,12 @@ button {
     padding: 18px;
   }
 
+  .dor-card p {
+    font-size: 0.9rem;
+    line-height: 1.42;
+    max-width: calc(100% - 62px);
+  }
+
   .dor-card__icon {
     width: 48px;
     height: 48px;
@@ -2334,6 +2355,7 @@ button {
 
   .passo {
     gap: 14px;
+    padding: 18px;
   }
 
   .passo__body h3 {
@@ -2354,8 +2376,8 @@ button {
   }
 
   .urgencia__panel {
-    border-radius: 20px;
-    padding: 32px 20px;
+    border-radius: 0;
+    padding: 0;
   }
 
   .badge {
@@ -2365,8 +2387,12 @@ button {
   }
 
   .urgencia__panel h2 {
-    font-size: clamp(1.7rem, 8vw, 2.25rem);
+    font-size: clamp(1.45rem, 6.4vw, 1.95rem);
     line-height: 1.14;
+    white-space: normal;
+    max-width: min(100%, 320px);
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .urgencia__panel > p {
@@ -2379,12 +2405,19 @@ button {
   }
 
   .countdown {
-    gap: 8px;
+    width: 100%;
+    gap: 6px;
     margin-bottom: 28px;
   }
 
+  .countdown__unit {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
   .countdown__card {
-    min-width: 74px;
+    width: 100%;
+    min-width: 0;
     padding: 16px 6px 12px;
     border-radius: 14px;
   }
@@ -2402,6 +2435,7 @@ button {
   .countdown__sep {
     font-size: 1.6rem;
     margin-bottom: 10px;
+    flex: 0 0 auto;
   }
 
   .urgencia .btn,
@@ -2419,7 +2453,15 @@ button {
   }
 
   .cta-final__inner h2 {
-    font-size: clamp(1.7rem, 8vw, 2.25rem);
+    font-size: clamp(1.45rem, 6.4vw, 1.95rem);
+    max-width: min(100%, 320px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-final__inner p {
+    font-size: 0.92rem;
+    line-height: 1.6;
   }
 
   .cta-final__trust {
@@ -2437,12 +2479,12 @@ button {
 
 @media (max-width: 420px) {
   .hero {
-    min-height: 535px;
+    min-height: auto;
     background-position: 61% top;
   }
 
   .hero__content {
-    max-width: 300px;
+    max-width: 100%;
   }
 
   .site-header__name {
@@ -2458,6 +2500,47 @@ button {
     white-space: normal;
     line-height: 1.05;
     text-align: center;
+  }
+
+  .badge {
+    max-width: 100%;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .section-title,
+  .urgencia__panel h2,
+  .cta-final__inner h2 {
+    font-size: clamp(1.38rem, 6.6vw, 1.82rem);
+  }
+
+  .section-title--single-line {
+    font-size: clamp(1.2rem, 5.6vw, 1.55rem);
+  }
+
+  .dor-card {
+    padding: 16px;
+  }
+
+  .countdown {
+    gap: 4px;
+  }
+
+  .countdown__card {
+    padding: 14px 4px 10px;
+  }
+
+  .countdown__num {
+    font-size: 1.65rem;
+  }
+
+  .countdown__card-label {
+    font-size: 0.42rem;
+    letter-spacing: 0.08em;
+  }
+
+  .countdown__sep {
+    font-size: 1.25rem;
   }
 }
 
