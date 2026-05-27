@@ -1696,7 +1696,7 @@ button {
 
 .cta-final__trust {
   list-style: none;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -2194,6 +2194,7 @@ button {
 
 @media (min-width: 900px) {
   .site-header__hamburger { display: none; }
+  .cta-final__trust { display: flex; }
 }
 
 /* ═══════════════════════════════════════════
@@ -2361,7 +2362,7 @@ button {
   }
 
   .hero__headline {
-    font-size: clamp(1.78rem, 8.6vw, 2.25rem);
+    font-size: clamp(1.95rem, 9.2vw, 2.48rem);
     line-height: 1.08;
     margin-bottom: 14px;
     color: #fff;
@@ -2407,7 +2408,7 @@ button {
   }
 
   .section-title {
-    font-size: clamp(1.45rem, 6.4vw, 1.95rem);
+    font-size: clamp(1.78rem, 7.8vw, 2.35rem);
     line-height: 1.16;
     margin-bottom: 28px;
     max-width: min(100%, 320px);
@@ -2420,7 +2421,7 @@ button {
   }
 
   .section-title--single-line {
-    font-size: clamp(1.32rem, 5.9vw, 1.78rem);
+    font-size: clamp(1.78rem, 7.8vw, 2.35rem);
     white-space: normal;
   }
 
@@ -2492,7 +2493,7 @@ button {
   }
 
   .urgencia__panel h2 {
-    font-size: clamp(1.45rem, 6.4vw, 1.95rem);
+    font-size: clamp(1.78rem, 7.8vw, 2.35rem);
     line-height: 1.14;
     white-space: normal;
     max-width: min(100%, 320px);
@@ -2558,7 +2559,7 @@ button {
   }
 
   .cta-final__inner h2 {
-    font-size: clamp(1.45rem, 6.4vw, 1.95rem);
+    font-size: clamp(1.78rem, 7.8vw, 2.35rem);
     max-width: min(100%, 320px);
     margin-left: auto;
     margin-right: auto;
@@ -2616,11 +2617,11 @@ button {
   .section-title,
   .urgencia__panel h2,
   .cta-final__inner h2 {
-    font-size: clamp(1.38rem, 6.6vw, 1.82rem);
+    font-size: clamp(1.62rem, 7.6vw, 2.1rem);
   }
 
   .section-title--single-line {
-    font-size: clamp(1.2rem, 5.6vw, 1.55rem);
+    font-size: clamp(1.62rem, 7.6vw, 2.1rem);
   }
 
   .dor-card {
