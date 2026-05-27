@@ -2406,25 +2406,45 @@ button {
   }
 
   .hero {
-    min-height: auto;
+    display: flex;
+    align-items: flex-end;
+    min-height: calc(100svh - 62px);
     height: auto;
-    padding: 92px 0 48px;
-    background: #07234E;
+    padding: 0 0 34px;
+    background: #07234E url("Emagreça Rápido.jpg") center top / cover no-repeat;
   }
 
   .hero::before {
     content: none;
   }
 
+  .hero > .container {
+    width: 100%;
+  }
+
   .hero__inner {
     align-items: center;
+    justify-content: flex-end;
+    min-height: calc(100svh - 96px);
+    gap: 0;
   }
 
   .hero__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 360px;
     margin: 0 auto;
     text-align: center;
+  }
+
+  .hero__content .badge,
+  .hero__headline,
+  .hero__subheadline,
+  .hero__microcopy,
+  .hero__product-mobile {
+    display: none;
   }
 
   .hero__content .badge {
@@ -2484,7 +2504,7 @@ button {
 
   .hero__product-mobile {
     position: relative;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     width: min(60vw, 210px);
