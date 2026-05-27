@@ -2695,7 +2695,7 @@ button {
   }
 
   .section-title {
-    font-size: clamp(1.45rem, 6.5vw, 2.35rem);
+    font-size: clamp(1.7rem, 7.8vw, 2.65rem);
     line-height: 1.16;
     margin-bottom: 28px;
     max-width: min(100%, 340px);
@@ -2708,7 +2708,7 @@ button {
   }
 
   .section-title--single-line {
-    font-size: clamp(1.45rem, 6.5vw, 2.35rem);
+    font-size: clamp(1.7rem, 7.8vw, 2.65rem);
     white-space: normal;
   }
 
@@ -2870,7 +2870,7 @@ button {
   }
 
   .urgencia__panel h2 {
-    font-size: clamp(1.45rem, 6.5vw, 2.35rem);
+    font-size: clamp(1.7rem, 7.8vw, 2.65rem);
     line-height: 1.14;
     white-space: normal;
     max-width: min(100%, 340px);
@@ -2936,7 +2936,7 @@ button {
   }
 
   .cta-final__inner h2 {
-    font-size: clamp(1.45rem, 6.5vw, 2.35rem);
+    font-size: clamp(1.7rem, 7.8vw, 2.65rem);
     max-width: min(100%, 340px);
     margin-left: auto;
     margin-right: auto;
@@ -2994,11 +2994,11 @@ button {
   .section-title,
   .urgencia__panel h2,
   .cta-final__inner h2 {
-    font-size: clamp(1.35rem, 6.2vw, 1.9rem);
+    font-size: clamp(1.62rem, 7.4vw, 2.2rem);
   }
 
   .section-title--single-line {
-    font-size: clamp(1.35rem, 6.2vw, 1.9rem);
+    font-size: clamp(1.62rem, 7.4vw, 2.2rem);
   }
 
   .dor-card {
