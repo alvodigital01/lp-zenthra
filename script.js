@@ -135,20 +135,85 @@
   /* ---- Mobile: setas de navegação ---- */
   if (btnPrev && btnNext) {
     function cardW() {
-      var card = track.querySelector('.depo-card');
+      var card = track.querySelector('.depo-card:not([data-clone])');
       if (!card) return 0;
       var gap = parseInt(getComputedStyle(track).gap) || 14;
       return card.offsetWidth + gap;
     }
 
     btnNext.addEventListener('click', function() {
+      if (track._depoPauseAuto) track._depoPauseAuto();
       track.scrollBy({ left: cardW(), behavior: 'smooth' });
     });
 
     btnPrev.addEventListener('click', function() {
+      if (track._depoPauseAuto) track._depoPauseAuto();
       track.scrollBy({ left: -cardW(), behavior: 'smooth' });
     });
   }
+
+  /* ---- Mobile: troca automÃ¡tica dos depoimentos ---- */
+  (function initMobileAutoScroll() {
+    var mobileMq = window.matchMedia('(max-width: 899px)');
+    var reduceMq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var timer = null;
+    var resumeTimer = null;
+
+    function isEnabled() {
+      return mobileMq.matches && !reduceMq.matches;
+    }
+
+    function stop() {
+      if (!timer) return;
+      clearInterval(timer);
+      timer = null;
+    }
+
+    function step() {
+      if (!isEnabled()) return;
+      var distance = 0;
+      var card = track.querySelector('.depo-card:not([data-clone])');
+      if (card) {
+        var gap = parseInt(getComputedStyle(track).gap) || 14;
+        distance = card.offsetWidth + gap;
+      }
+      if (!distance) return;
+
+      var maxScroll = track.scrollWidth - track.clientWidth - 2;
+      if (track.scrollLeft >= maxScroll) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+        return;
+      }
+
+      track.scrollBy({ left: distance, behavior: 'smooth' });
+    }
+
+    function start() {
+      stop();
+      if (isEnabled()) timer = setInterval(step, 3600);
+    }
+
+    function pauseAndResume() {
+      stop();
+      if (resumeTimer) clearTimeout(resumeTimer);
+      resumeTimer = setTimeout(start, 6500);
+    }
+
+    track._depoPauseAuto = pauseAndResume;
+    track.addEventListener('touchstart', pauseAndResume, { passive: true });
+    track.addEventListener('pointerdown', pauseAndResume, { passive: true });
+    track.addEventListener('wheel', pauseAndResume, { passive: true });
+
+    if (mobileMq.addEventListener) {
+      mobileMq.addEventListener('change', start);
+      reduceMq.addEventListener('change', start);
+    } else if (mobileMq.addListener) {
+      mobileMq.addListener(start);
+      reduceMq.addListener(start);
+    }
+
+    start();
+  })();
 })();
 
 
