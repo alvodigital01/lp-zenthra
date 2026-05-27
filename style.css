@@ -143,6 +143,15 @@ button {
   display: inline;
 }
 
+@media (max-width: 899px) {
+  .mobile-title-line {
+    display: block;
+  }
+  .section-title {
+    font-size: clamp(1.7rem, 5.2vw, 3.4rem);
+  }
+}
+
 /* Badge universal */
 .badge {
   display: flex;
