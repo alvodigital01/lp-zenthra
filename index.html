@@ -95,6 +95,17 @@
     </nav>
   </div>
 
+  <div class="product-modal" id="productModal" aria-hidden="true">
+    <button class="product-modal__backdrop" type="button" aria-label="Fechar foto" data-product-modal-close></button>
+    <div class="product-modal__dialog" role="dialog" aria-modal="true" aria-label="Foto da ampola de Tirzepatida">
+      <button class="product-modal__close" type="button" aria-label="Fechar foto" data-product-modal-close>
+        <span></span>
+        <span></span>
+      </button>
+      <img src="tirzex1.webp" alt="Ampola de Tirzepatida">
+    </div>
+  </div>
+
   <!-- ═══════════════════════════════════
        SEÇÃO 1: HERO
   ═══════════════════════════════════ -->
@@ -138,19 +149,26 @@
           </p>
         </div>
 
-        <a
+        <button
+          type="button"
           class="hero__product-mobile fade-up"
-          href="tirzex1.webp"
-          target="_blank"
-          rel="noopener noreferrer"
           aria-label="Abrir foto da ampola de Tirzepatida"
+          data-product-modal-open
         >
           <img
             src="tirzex1.webp"
             alt="Ampola de Tirzepatida"
             loading="eager"
           >
-        </a>
+          <span class="hero__product-zoom" aria-hidden="true">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="7"></circle>
+              <path d="M21 21l-4.35-4.35"></path>
+              <path d="M11 8v6"></path>
+              <path d="M8 11h6"></path>
+            </svg>
+          </span>
+        </button>
 
         <div class="hero__visual fade-right" aria-hidden="true">
           <div class="before-after">

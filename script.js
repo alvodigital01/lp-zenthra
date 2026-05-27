@@ -502,3 +502,35 @@
   window.addEventListener('scroll', requestUpdate, { passive: true });
   update();
 })();
+
+
+/* Product image modal */
+(function initProductModal() {
+  var modal = document.getElementById('productModal');
+  var openBtn = document.querySelector('[data-product-modal-open]');
+  if (!modal || !openBtn) return;
+
+  var closeBtns = modal.querySelectorAll('[data-product-modal-close]');
+
+  function toggle(open) {
+    modal.classList.toggle('is-open', open);
+    modal.setAttribute('aria-hidden', open ? 'false' : 'true');
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  openBtn.addEventListener('click', function() {
+    toggle(true);
+  });
+
+  closeBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      toggle(false);
+    });
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+      toggle(false);
+    }
+  });
+})();
