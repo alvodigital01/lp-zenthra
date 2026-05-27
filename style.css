@@ -2735,6 +2735,12 @@ button {
     margin-right: auto;
   }
 
+  .entrega__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .entrega__list {
     width: min(100%, 310px);
     margin-left: auto;
@@ -2758,10 +2764,6 @@ button {
 
   .entrega__video-wrap {
     width: min(68vw, 230px);
-  }
-
-  .entrega__video {
-    aspect-ratio: 9 / 16;
   }
 
   .entrega__video-hint {
