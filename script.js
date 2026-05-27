@@ -120,6 +120,7 @@
   var btnPrev = document.getElementById('depoPrev');
   var btnNext = document.getElementById('depoNext');
   if (!track) return;
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
 
   /* Clona todos os cards originais e adiciona ao final
      Os clones ficam ocultos no mobile (via CSS data-clone)
@@ -131,6 +132,16 @@
     clone.setAttribute('aria-hidden', 'true');
     track.appendChild(clone);
   });
+
+  function resetMobilePosition() {
+    if (!window.matchMedia('(max-width: 899px)').matches) return;
+    track.scrollLeft = 0;
+    track.scrollTo({ left: 0, behavior: 'auto' });
+  }
+
+  resetMobilePosition();
+  requestAnimationFrame(resetMobilePosition);
+  window.addEventListener('load', resetMobilePosition, { once: true });
 
   /* ---- Mobile: setas de navegação ---- */
   if (btnPrev && btnNext) {
@@ -190,7 +201,10 @@
 
     function start() {
       stop();
-      if (isEnabled()) timer = setInterval(step, 3600);
+      if (isEnabled()) {
+        resetMobilePosition();
+        timer = setInterval(step, 3600);
+      }
     }
 
     function pauseAndResume() {
@@ -212,7 +226,7 @@
       reduceMq.addListener(start);
     }
 
-    start();
+    setTimeout(start, 900);
   })();
 })();
 
