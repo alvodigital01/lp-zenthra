@@ -1981,7 +1981,7 @@ button {
   left: 0;
   height: 2px;
   z-index: 100000;
-  background: linear-gradient(90deg, var(--c-cta), var(--c-primary));
+  background: #092755;
   width: 100%;
   transform: scaleX(0);
   transform-origin: left center;
