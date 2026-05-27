@@ -838,6 +838,105 @@ button {
   overflow: hidden;
 }
 
+/* ═══════════════════════════════════
+   SEÇÃO 2: ENTREGA
+═══════════════════════════════════ */
+.entrega {
+  padding: var(--sp-xl) 0;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.entrega::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 18% 20%, rgba(37,211,102,0.08) 0%, transparent 34%),
+    linear-gradient(180deg, rgba(244,247,248,0.8) 0%, rgba(255,255,255,0) 46%);
+  pointer-events: none;
+}
+
+.entrega > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.entrega__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(280px, 0.72fr);
+  align-items: center;
+  gap: clamp(28px, 6vw, 72px);
+}
+
+.entrega__content {
+  color: var(--c-title);
+}
+
+.entrega__content .badge {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.entrega__content .section-title {
+  color: var(--c-title);
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+.entrega__content > p {
+  max-width: 560px;
+  color: var(--c-body);
+  font-size: 1.04rem;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.entrega__list {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 26px;
+  padding: 0;
+  list-style: none;
+}
+
+.entrega__list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--c-secondary);
+  font-weight: 700;
+}
+
+.entrega__list svg {
+  flex-shrink: 0;
+}
+
+.entrega__video-wrap {
+  position: relative;
+  width: min(100%, 560px);
+  justify-self: center;
+  padding: 10px;
+  border: 1px solid rgba(11,107,122,0.12);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 18px 46px rgba(9,58,74,0.14);
+}
+
+.entrega__video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #041e30;
+}
+
+.entrega__video-hint {
+  display: none;
+}
+
 .dores::before {
   display: none;
 }
@@ -2578,6 +2677,7 @@ button {
   }
 
   .dores,
+  .entrega,
   .beneficios,
   .como-funciona,
   .urgencia,
@@ -2590,6 +2690,90 @@ button {
     align-items: flex-start;
     gap: 14px;
     padding: 18px;
+  }
+
+  .entrega__inner {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .entrega__content {
+    text-align: center;
+  }
+
+  .entrega__content .badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .entrega__content .section-title {
+    text-align: center;
+  }
+
+  .entrega__content > p {
+    font-size: 0.94rem;
+    line-height: 1.58;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .entrega__list {
+    width: min(100%, 310px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .entrega__list li {
+    font-size: 0.9rem;
+  }
+
+  .entrega .btn {
+    width: min(100%, 310px);
+    min-height: 52px;
+    padding: 16px 18px;
+    font-size: 0.78rem;
+    white-space: normal;
+    line-height: 1.15;
+    text-align: center;
+  }
+
+  .entrega__video-wrap {
+    width: min(68vw, 230px);
+    order: -1;
+  }
+
+  .entrega__video {
+    aspect-ratio: 9 / 16;
+  }
+
+  .entrega__video-hint {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .entrega__video-hint span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 34px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: rgba(37,211,102,0.94);
+    color: #ffffff;
+    box-shadow: 0 10px 24px rgba(0,0,0,0.22);
+    font-size: 0.72rem;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
   }
 
   .dor-card p {
