@@ -2409,7 +2409,7 @@ button {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: min(68vw, 240px);
+    width: min(60vw, 210px);
     aspect-ratio: 1;
     margin: 8px auto 0;
     padding: 18px;
