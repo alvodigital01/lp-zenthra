@@ -152,7 +152,7 @@
     });
   }
 
-  /* ---- Mobile: troca automÃ¡tica dos depoimentos ---- */
+  /* ---- Mobile: troca automática dos depoimentos ---- */
   (function initMobileAutoScroll() {
     var mobileMq = window.matchMedia('(max-width: 899px)');
     var reduceMq = window.matchMedia('(prefers-reduced-motion: reduce)');
