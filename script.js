@@ -534,3 +534,19 @@
     }
   });
 })();
+
+
+/* Delivery video hint */
+(function initDeliveryVideoHint() {
+  document.querySelectorAll('.entrega__video-wrap').forEach(function(wrap) {
+    var video = wrap.querySelector('video');
+    if (!video) return;
+
+    function hideHint() {
+      wrap.classList.add('is-started');
+    }
+
+    video.addEventListener('click', hideHint, { once: true });
+    video.addEventListener('play', hideHint, { once: true });
+  });
+})();
