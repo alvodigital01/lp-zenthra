@@ -311,11 +311,11 @@ button {
   .section-cta .btn {
     width: min(100%, 340px);
     min-height: 52px;
-    padding: 16px 18px;
-    font-size: 0.78rem;
-    line-height: 1.15;
+    padding: 16px 28px;
+    font-size: 0.93rem;
+    line-height: 1;
     text-align: center;
-    white-space: normal;
+    white-space: nowrap;
   }
 }
 
@@ -2624,12 +2624,12 @@ button {
   }
 
   .hero .btn {
-    width: min(100%, 310px);
+    width: min(100%, 340px);
     min-height: 52px;
-    padding: 16px 18px;
-    font-size: 0.78rem;
-    white-space: normal;
-    line-height: 1.15;
+    padding: 16px 28px;
+    font-size: 0.93rem;
+    white-space: nowrap;
+    line-height: 1;
     text-align: center;
   }
 
@@ -2779,12 +2779,12 @@ button {
   }
 
   .entrega .btn {
-    width: min(100%, 310px);
+    width: min(100%, 340px);
     min-height: 52px;
-    padding: 16px 18px;
-    font-size: 0.78rem;
-    white-space: normal;
-    line-height: 1.15;
+    padding: 16px 28px;
+    font-size: 0.93rem;
+    white-space: nowrap;
+    line-height: 1;
     text-align: center;
   }
 
