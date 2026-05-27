@@ -508,7 +508,7 @@ button {
 .hero {
   position: relative;
   font-family: var(--font-display);
-  background: #fff url("banner1.jpg") center top / cover no-repeat;
+  background: #fff url("Antes (2).jpg") center top / cover no-repeat;
   height: calc(100vw * 900 / 1920);
   padding: clamp(128px, 13vw, 152px) 0 0;
   overflow: hidden;
