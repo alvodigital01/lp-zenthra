@@ -2328,18 +2328,11 @@ button {
     min-height: auto;
     height: auto;
     padding: 92px 0 48px;
-    background-image: url("bannermob.jpg");
-    background-size: cover;
-    background-position: center top;
+    background: #07234E;
   }
 
   .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.76);
-    pointer-events: none;
-    z-index: 0;
+    content: none;
   }
 
   .hero__inner {
@@ -2356,17 +2349,17 @@ button {
   .hero__content .badge {
     margin-left: auto;
     margin-right: auto;
-    background: rgba(255,255,255,0.92);
-    color: #178a3e;
-    border-color: rgba(37,211,102,0.55);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    background: rgba(37,211,102,0.12);
+    color: #25D366;
+    border-color: rgba(37,211,102,0.28);
+    box-shadow: none;
   }
 
   .hero__headline {
     font-size: clamp(1.6rem, 7.5vw, 2.48rem);
     line-height: 1.08;
     margin-bottom: 14px;
-    color: #fff;
+    color: #ffffff;
   }
 
   .hero__headline-highlight {
@@ -2380,7 +2373,7 @@ button {
     max-width: 330px;
     margin-left: auto;
     margin-right: auto;
-    color: rgba(255,255,255,0.86);
+    color: rgba(178,202,225,0.72);
   }
 
   .hero__subheadline br {
@@ -2405,7 +2398,7 @@ button {
     line-height: 1.35;
     margin-left: auto;
     margin-right: auto;
-    color: rgba(255,255,255,0.82);
+    color: rgba(178,202,225,0.72);
   }
 
   .section-title {
