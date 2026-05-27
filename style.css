@@ -293,6 +293,32 @@ button {
   animation: pulse-btn 2.8s ease-in-out infinite;
 }
 
+.section-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--sp-lg);
+}
+
+.section-cta--dark {
+  margin-top: calc(var(--sp-lg) + 4px);
+}
+
+@media (max-width: 899px) {
+  .section-cta {
+    padding: 0 var(--pad);
+  }
+
+  .section-cta .btn {
+    width: min(100%, 340px);
+    min-height: 52px;
+    padding: 16px 18px;
+    font-size: 0.78rem;
+    line-height: 1.15;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
 /* ═══════════════════════════════════════════
    HEADER
 ═══════════════════════════════════════════ */
