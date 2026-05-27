@@ -891,7 +891,7 @@ button {
 
 .entrega__inner {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(280px, 0.72fr);
+  grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1fr);
   grid-template-areas:
     "content video"
     "details video";
@@ -951,7 +951,7 @@ button {
 .entrega__video-wrap {
   grid-area: video;
   position: relative;
-  width: min(100%, 560px);
+  width: min(100%, 680px);
   justify-self: center;
   padding: 10px;
   border: 1px solid rgba(11,107,122,0.12);
@@ -975,6 +975,12 @@ button {
 
 .entrega__video-wrap.is-started .entrega__video-hint {
   display: none;
+}
+
+.entrega__cta svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
 }
 
 .dores::before {
@@ -2698,7 +2704,8 @@ button {
     font-size: clamp(1.7rem, 7.8vw, 2.65rem);
     line-height: 1.16;
     margin-bottom: 28px;
-    max-width: min(100%, 340px);
+    width: 100%;
+    max-width: min(100%, 370px);
     margin-left: auto;
     margin-right: auto;
   }
@@ -2713,7 +2720,7 @@ button {
   }
 
   .mobile-title-line {
-    display: inline;
+    display: block;
   }
 
   .dores,
@@ -2728,8 +2735,10 @@ button {
 
   .dor-card {
     align-items: flex-start;
-    gap: 14px;
-    padding: 18px;
+    width: 100%;
+    max-width: 100%;
+    gap: 10px;
+    padding: 16px 14px;
   }
 
   .entrega__inner {
@@ -2822,9 +2831,15 @@ button {
   }
 
   .dor-card p {
+    flex: 0 1 calc(100% - 58px);
+    display: block;
+    width: calc(100% - 58px);
+    min-width: 0;
     font-size: 0.9rem;
     line-height: 1.42;
-    max-width: calc(100% - 62px);
+    max-width: calc(100% - 58px);
+    white-space: normal;
+    overflow-wrap: break-word;
   }
 
   .dor-card__icon {
@@ -2994,15 +3009,23 @@ button {
   .section-title,
   .urgencia__panel h2,
   .cta-final__inner h2 {
-    font-size: clamp(1.62rem, 7.4vw, 2.2rem);
+    font-size: clamp(1.6rem, 7vw, 2rem);
   }
 
   .section-title--single-line {
-    font-size: clamp(1.62rem, 7.4vw, 2.2rem);
+    font-size: clamp(1.6rem, 7vw, 2rem);
   }
 
   .dor-card {
-    padding: 16px;
+    gap: 10px;
+    padding: 16px 14px;
+  }
+
+  .dor-card p {
+    flex-basis: calc(100% - 62px);
+    width: calc(100% - 62px);
+    max-width: calc(100% - 62px);
+    font-size: 0.84rem;
   }
 
   .countdown {
