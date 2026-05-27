@@ -2373,7 +2373,7 @@ button {
     max-width: 330px;
     margin-left: auto;
     margin-right: auto;
-    color: rgba(178,202,225,0.72);
+    color: #ffffff;
   }
 
   .hero__subheadline br {
@@ -2398,7 +2398,7 @@ button {
     line-height: 1.35;
     margin-left: auto;
     margin-right: auto;
-    color: rgba(178,202,225,0.72);
+    color: #ffffff;
   }
 
   .section-title {
