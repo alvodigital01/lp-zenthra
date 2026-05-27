@@ -2363,7 +2363,7 @@ button {
   }
 
   .hero__headline {
-    font-size: clamp(1.95rem, 9.2vw, 2.48rem);
+    font-size: clamp(1.6rem, 7.5vw, 2.48rem);
     line-height: 1.08;
     margin-bottom: 14px;
     color: #fff;
