@@ -2763,7 +2763,7 @@ button {
   }
 
   .entrega__video-wrap {
-    width: min(68vw, 230px);
+    width: min(92vw, 360px);
   }
 
   .entrega__video-hint {
