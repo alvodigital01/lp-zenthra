@@ -144,6 +144,26 @@ button {
 }
 
 
+/* Banner de confirmação do quiz */
+.quiz-confirm-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(37,211,102,0.1);
+  border-top: 1px solid rgba(37,211,102,0.2);
+  border-bottom: 1px solid rgba(37,211,102,0.2);
+  color: #178a3e;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.quiz-confirm-bar strong { font-weight: 800; }
+.quiz-confirm-bar svg { flex-shrink: 0; color: var(--c-wpp); }
+
 /* Badge universal */
 .badge {
   display: flex;
