@@ -1,952 +1,772 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Tirzepatida 15mg/0,5mL. Reduza a fome, elimine a compulsão e emagreça com leveza. Atendimento humano pelo WhatsApp em até 5 minutos.">
-  <title>Tirzepatida | Emagreça sem passar fome | Atendimento Humano</title>
+  <meta name="description" content="Análise de perfil gratuita. Descubra em menos de 1 minuto se a Tirzepatida pode te ajudar.">
+  <title>Zenthra — Análise de Perfil Gratuita</title>
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1FYY10GWYW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-1FYY10GWYW');
-  </script>
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Tirzepatida | Emagreça sem passar fome | Atendimento Humano">
-  <meta property="og:description" content="Tirzepatida age direto no cérebro reduzindo o apetite e a compulsão alimentar. Atendimento humano pelo WhatsApp em até 5 minutos.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="og-image.jpg">
-  <meta property="og:locale" content="pt_BR">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Tirzepatida | Emagreça sem passar fome | Atendimento Humano">
-  <meta name="twitter:description" content="Tirzepatida age direto no cérebro reduzindo o apetite e a compulsão alimentar.">
-
-  <!--
-  ============================================================
-  META PIXEL: cole seu Pixel ID abaixo e descomente o bloco
-  ============================================================
-  <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', 'SEU_PIXEL_ID_AQUI');
-    fbq('track', 'PageView');
-  </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=SEU_PIXEL_ID_AQUI&ev=PageView&noscript=1"/>
-  </noscript>
-  -->
-
-  <link rel="icon" type="image/png" href="logozenthra.PNG">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@700;800;900&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --c-primary:  #0B6B7A;
+      --c-secondary:#093A4A;
+      --c-wpp:      #25D366;
+      --c-wpp-dark: #1eaa52;
+      --c-white:    #FFFFFF;
+      --font-d:     'Urbanist', sans-serif;
+      --font:       'DM Sans', sans-serif;
+    }
+
+    html { font-size: 16px; -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      background: linear-gradient(160deg, #03080f 0%, #060f1e 45%, #0b1e35 100%);
+      color: var(--c-white);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ─── HEADER ─────────────────────────────── */
+    .qheader {
+      padding: 16px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      flex-shrink: 0;
+    }
+
+    .qheader img {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.92);
+      padding: 2px;
+      object-fit: contain;
+    }
+
+    .qheader__name {
+      font-family: var(--font-d);
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.88);
+    }
+
+    /* ─── MAIN ───────────────────────────────── */
+    .qmain {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 28px 20px 48px;
+    }
+
+    /* ─── INTRO ──────────────────────────────── */
+    .qintro {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .qintro__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(37,211,102,0.1);
+      border: 1px solid rgba(37,211,102,0.32);
+      border-radius: 99px;
+      padding: 5px 14px;
+      font-size: 0.63rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--c-wpp);
+      margin-bottom: 14px;
+    }
+
+    .qintro h1 {
+      font-family: var(--font-d);
+      font-size: clamp(1.4rem, 5vw, 1.9rem);
+      font-weight: 900;
+      line-height: 1.14;
+      color: var(--c-white);
+      margin-bottom: 8px;
+    }
+
+    .qintro p {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+    }
+
+    /* ─── CARD ───────────────────────────────── */
+    .qcard {
+      width: 100%;
+      max-width: 520px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-radius: 26px;
+      padding: 32px 28px;
+      overflow: hidden;
+    }
+
+    /* ─── PROGRESS ───────────────────────────── */
+    .qprogress { margin-bottom: 28px; }
+
+    .qprogress__meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 9px;
+    }
+
+    .qprogress__label {
+      font-size: 0.68rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.42);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .qprogress__step {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--c-wpp);
+      letter-spacing: 0.04em;
+    }
+
+    .qprogress__bar {
+      height: 3px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .qprogress__fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--c-wpp-dark), var(--c-wpp));
+      border-radius: 99px;
+      width: 20%;
+      transition: width 0.55s cubic-bezier(.22,1,.36,1);
+    }
+
+    /* ─── SLIDE ──────────────────────────────── */
+    .slides { position: relative; }
+
+    .slide { display: none; }
+
+    .slide.active {
+      display: block;
+      animation: slideIn 0.36s cubic-bezier(.22,1,.36,1);
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(28px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    /* ─── QUESTION ───────────────────────────── */
+    .q__tag {
+      display: block;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--c-wpp);
+      margin-bottom: 8px;
+    }
+
+    .q__text {
+      font-family: var(--font-d);
+      font-size: clamp(1.15rem, 3.5vw, 1.5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--c-white);
+      margin-bottom: 22px;
+    }
+
+    /* ─── OPTIONS ────────────────────────────── */
+    .options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+    }
+
+    .opt {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      background: rgba(255,255,255,0.05);
+      border: 1.5px solid rgba(255,255,255,0.1);
+      border-radius: 14px;
+      padding: 14px 13px;
+      cursor: pointer;
+      text-align: left;
+      transition: border-color 0.18s, background 0.18s, transform 0.15s;
+      -webkit-tap-highlight-color: transparent;
+      font-family: var(--font);
+    }
+
+    .opt:hover {
+      background: rgba(255,255,255,0.09);
+      border-color: rgba(37,211,102,0.38);
+      transform: translateY(-1px);
+    }
+
+    .opt.selected {
+      background: rgba(37,211,102,0.14);
+      border-color: var(--c-wpp);
+    }
+
+    .opt__icon {
+      width: 32px; height: 32px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.75);
+      flex-shrink: 0;
+    }
+
+    .opt.selected .opt__icon {
+      background: rgba(37,211,102,0.18);
+      color: var(--c-wpp);
+    }
+
+    /* Cores por posição — aplica em todas as perguntas */
+    .opt:nth-child(1) .opt__icon { background: rgba(45,212,191,0.18); color: #2dd4bf; }
+    .opt:nth-child(2) .opt__icon { background: rgba(74,222,128,0.18); color: #4ade80; }
+    .opt:nth-child(3) .opt__icon { background: rgba(251,146,60,0.18); color: #fb923c; }
+    .opt:nth-child(4) .opt__icon { background: rgba(167,139,250,0.18); color: #c4b5fd; }
+
+    .opt.selected:nth-child(1) .opt__icon { background: rgba(45,212,191,0.28); color: #5eead4; }
+    .opt.selected:nth-child(2) .opt__icon { background: rgba(74,222,128,0.28); color: #86efac; }
+    .opt.selected:nth-child(3) .opt__icon { background: rgba(251,146,60,0.28); color: #fdba74; }
+    .opt.selected:nth-child(4) .opt__icon { background: rgba(167,139,250,0.28); color: #ddd6fe; }
+
+    .opt__label {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.3;
+    }
+
+    /* ─── LOADING ────────────────────────────── */
+    .loading-wrap {
+      text-align: center;
+      padding: 24px 0 8px;
+    }
+
+    .lring {
+      width: 68px; height: 68px;
+      margin: 0 auto 18px;
+    }
+
+    .lring circle {
+      fill: none;
+      stroke-width: 4.5;
+      stroke-linecap: round;
+    }
+
+    .lring .track { stroke: rgba(255,255,255,0.09); }
+
+    .lring .arc {
+      stroke: var(--c-wpp);
+      stroke-dasharray: 188;
+      stroke-dashoffset: 188;
+      transform-origin: center;
+      transform: rotate(-90deg);
+      animation: arcFill 2.3s ease forwards;
+    }
+
+    @keyframes arcFill {
+      to { stroke-dashoffset: 22; }
+    }
+
+    .loading-title {
+      font-family: var(--font-d);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--c-white);
+      margin-bottom: 6px;
+    }
+
+    .loading-sub {
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.45);
+    }
+
+    .dots span {
+      animation: blink 1.3s ease-in-out infinite;
+    }
+    .dots span:nth-child(2) { animation-delay: 0.18s; }
+    .dots span:nth-child(3) { animation-delay: 0.36s; }
+
+    @keyframes blink {
+      0%, 80%, 100% { opacity: 0.2; }
+      40%            { opacity: 1; }
+    }
+
+    /* ─── RESULT ─────────────────────────────── */
+    .result-wrap { text-align: center; }
+
+    .result-icon {
+      width: 60px; height: 60px;
+      background: rgba(37,211,102,0.12);
+      border: 2px solid rgba(37,211,102,0.45);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      animation: popIn 0.5s cubic-bezier(.22,1,.36,1);
+    }
+
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(0.5); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+
+    .result-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(37,211,102,0.1);
+      border: 1px solid rgba(37,211,102,0.32);
+      border-radius: 99px;
+      padding: 5px 14px;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--c-wpp);
+      margin-bottom: 14px;
+    }
+
+    .result-title {
+      font-family: var(--font-d);
+      font-size: clamp(1.3rem, 4vw, 1.75rem);
+      font-weight: 900;
+      line-height: 1.14;
+      color: var(--c-white);
+      margin-bottom: 10px;
+    }
+
+    .result-sub {
+      font-size: 0.87rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.65;
+      margin-bottom: 20px;
+      max-width: 380px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .result-points {
+      list-style: none;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 14px;
+      padding: 14px 16px;
+      margin-bottom: 22px;
+      text-align: left;
+    }
+
+    .result-points li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.84rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.82);
+      padding: 5px 0;
+    }
+
+    .result-points li + li { border-top: 1px solid rgba(255,255,255,0.07); }
+
+    .result-points .ck { color: var(--c-wpp); flex-shrink: 0; }
+
+    /* ─── BUTTON ─────────────────────────────── */
+    .btn-go {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      width: 100%;
+      padding: 17px 24px;
+      border-radius: 99px;
+      background: var(--c-wpp);
+      color: var(--c-white);
+      font-family: var(--font);
+      font-size: 0.9rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 6px 28px rgba(37,211,102,0.45);
+      animation: pulseBtn 2.8s ease-in-out infinite;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-go:hover {
+      background: var(--c-wpp-dark);
+      transform: translateY(-2px);
+    }
+
+    @keyframes pulseBtn {
+      0%, 100% { box-shadow: 0 6px 28px rgba(37,211,102,0.45); }
+      50%       { box-shadow: 0 6px 36px rgba(37,211,102,0.65), 0 0 0 10px rgba(37,211,102,0.1); }
+    }
+
+    .btn-go__sub {
+      display: block;
+      text-align: center;
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.38);
+      font-weight: 500;
+      margin-top: 9px;
+    }
+
+    /* ─── FOOT NOTE ──────────────────────────── */
+    .qfoot {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 22px;
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.28);
+      font-weight: 500;
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────── */
+    @media (max-width: 420px) {
+      .qcard { padding: 24px 18px; border-radius: 20px; }
+      .options { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
-  <header class="site-header" aria-label="Cabeçalho principal">
-    <div class="container">
-      <div class="site-header__inner">
-        <a href="#hero" class="site-header__brand" aria-label="Ir para o início">
-          <img class="site-header__logo" src="logozenthra.PNG" alt="" aria-hidden="true">
-          <div class="site-header__brand-text">
-            <span class="site-header__name">Zenthra</span>
-            <span class="site-header__sub">Pharma</span>
-          </div>
-        </a>
-
-        <nav class="site-header__nav" aria-label="Navegação principal">
-          <a href="#dores">Para quem</a>
-          <a href="#como-funciona">Como funciona</a>
-          <a href="#depoimentos">Resultados</a>
-          <a href="#urgencia">Oferta</a>
-          <a href="#faq">Dúvidas</a>
-        </nav>
-
-        <button class="site-header__hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-
-        <a
-          href="https://wa.me/554399626440?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20e%20quero%20comprar%20Tirzepatida.%20Pode%20me%20passar%20valores%20e%20disponibilidade%3F"
-          class="site-header__cta"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          Quero emagrecer
-        </a>
-      </div>
-    </div>
+  <!-- HEADER -->
+  <header class="qheader">
+    <img src="logozenthra.PNG" alt="">
+    <span class="qheader__name">Zenthra Pharma</span>
   </header>
 
-  <!-- Mobile nav overlay -->
-  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
-    <nav>
-      <a href="#dores">Para quem</a>
-      <a href="#como-funciona">Como funciona</a>
-      <a href="#depoimentos">Resultados</a>
-      <a href="#urgencia">Oferta</a>
-      <a href="#faq">Dúvidas</a>
-      <a
-        href="https://wa.me/554399626440?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20e%20quero%20comprar%20Tirzepatida.%20Pode%20me%20passar%20valores%20e%20disponibilidade%3F"
-        class="btn btn--wpp btn--pulse mobile-nav__cta"
-        target="_blank" rel="noopener noreferrer"
-      >
-        Quero emagrecer
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M7 17L17 7"/>
-          <path d="M9 7h8v8"/>
-        </svg>
-      </a>
-    </nav>
-  </div>
+  <!-- MAIN -->
+  <main class="qmain">
 
-  <div class="product-modal" id="productModal" aria-hidden="true">
-    <button class="product-modal__backdrop" type="button" aria-label="Fechar foto" data-product-modal-close></button>
-    <div class="product-modal__dialog" role="dialog" aria-modal="true" aria-label="Foto da ampola de Tirzepatida">
-      <button class="product-modal__close" type="button" aria-label="Fechar foto" data-product-modal-close>
-        <span></span>
-        <span></span>
-      </button>
-      <img src="tirzex1.webp" alt="Ampola de Tirzepatida">
+    <!-- INTRO (acima do card) -->
+    <div class="qintro">
+      <div class="qintro__badge">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        ANÁLISE GRATUITA · 1 MINUTO
+      </div>
+      <h1>Descubra se você tem<br>perfil para o tratamento</h1>
+      <p>5 perguntas rápidas. Sem cadastro. Resultado imediato.</p>
     </div>
-  </div>
 
-  <!-- ═══════════════════════════════════
-       SEÇÃO 1: HERO
-  ═══════════════════════════════════ -->
-  <section class="hero" id="hero">
-    <div class="hero__bg-orb hero__bg-orb--1" aria-hidden="true"></div>
-    <div class="hero__bg-orb hero__bg-orb--2" aria-hidden="true"></div>
-    <div class="container">
-      <div class="hero__inner">
+    <!-- CARD DO QUIZ -->
+    <div class="qcard">
 
-        <div class="hero__content fade-left">
-          <div class="badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-2.9 8.1-7 10-4.1-1.9-7-5.4-7-10V6l7-3z"/><path d="M9 12l2 2 4-5"/></svg>
-            ESPECIALISTAS EM EMAGRECIMENTO
-          </div>
-          <h1 class="hero__headline">
-            <span class="btn__text-desktop">Menos fome.<br>Mais resultado. <span class="hero__headline-highlight">Sem sofrer com dieta.</span></span>
-            <span class="btn__text-mobile">Menos fome.<br>Mais resultado.<br><span class="hero__headline-highlight">Sem sofrer com dieta.</span></span>
-          </h1>
-          <p class="hero__subheadline">
-            Reduza o apetite e a compulsão alimentar<br>
-            para emagrecer com mais leveza.
-          </p>
-          <a
-            href="https://wa.me/554399626440?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20e%20quero%20comprar%20Tirzepatida.%20Pode%20me%20passar%20valores%20e%20disponibilidade%3F"
-            class="btn btn--wpp btn--lg btn--pulse btn-magnetic"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="btn__text-mobile">QUERO EMAGRECER</span>
-            <span class="btn__text-desktop">COMEÇAR MEU EMAGRECIMENTO</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M7 17L17 7"/>
-              <path d="M9 7h8v8"/>
-            </svg>
-          </a>
-          <p class="hero__microcopy">
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            Atendimento humano pelo WhatsApp em até 5 minutos
-          </p>
+      <!-- PROGRESS -->
+      <div class="qprogress" id="progressWrap">
+        <div class="qprogress__meta">
+          <span class="qprogress__label">Análise de perfil</span>
+          <span class="qprogress__step" id="stepLabel">Pergunta 1 de 5</span>
         </div>
+        <div class="qprogress__bar">
+          <div class="qprogress__fill" id="progressFill"></div>
+        </div>
+      </div>
 
-        <button
-          type="button"
-          class="hero__product-mobile fade-up"
-          aria-label="Abrir foto da ampola de Tirzepatida"
-          data-product-modal-open
-        >
-          <img
-            src="tirzex1.webp"
-            alt="Ampola de Tirzepatida"
-            loading="eager"
-          >
-          <span class="hero__product-zoom" aria-hidden="true">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="11" cy="11" r="7"></circle>
-              <path d="M21 21l-4.35-4.35"></path>
-              <path d="M11 8v6"></path>
-              <path d="M8 11h6"></path>
-            </svg>
-          </span>
-        </button>
+      <!-- SLIDES -->
+      <div class="slides">
 
-        <div class="hero__visual fade-right" aria-hidden="true">
-          <div class="before-after">
-            <div class="before-after__panel">
-              <div class="before-after__img before-after__img--before">
-                <svg width="52" height="52" viewBox="0 0 24 24" fill="rgba(255,255,255,0.25)">
-                  <path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"/>
-                </svg>
+        <!-- Q1 -->
+        <div class="slide active" id="q0">
+          <span class="q__tag">Pergunta 1</span>
+          <p class="q__text">Quanto você quer perder?</p>
+          <div class="options">
+            <button class="opt" onclick="pickOpt(0,0)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               </div>
-              <span class="before-after__label">ANTES</span>
-            </div>
-            <div class="before-after__arrow" aria-hidden="true">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F26B1F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
-              </svg>
-            </div>
-            <div class="before-after__panel">
-              <div class="before-after__img before-after__img--after">
-                <svg width="52" height="52" viewBox="0 0 24 24" fill="rgba(255,255,255,0.35)">
-                  <path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z"/>
-                </svg>
+              <span class="opt__label">5 a 10 kg</span>
+            </button>
+            <button class="opt" onclick="pickOpt(0,1)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
               </div>
-              <span class="before-after__label before-after__label--after">DEPOIS</span>
-            </div>
-          </div>
-          <div class="hero__vial-wrap">
-            <div class="hero__vial">
-              <div class="vial">
-                <div class="vial__cap"></div>
-                <div class="vial__neck"></div>
-                <div class="vial__body">
-                  <div class="vial__liquid"></div>
-                  <div class="vial__text">
-                    <span class="vial__name">Tirzepatida</span>
-                    <span class="vial__dose">15mg/0,5mL</span>
-                    <span class="vial__sub">Solução injetável</span>
-                  </div>
-                </div>
-                <div class="vial__base"></div>
+              <span class="opt__label">10 a 20 kg</span>
+            </button>
+            <button class="opt" onclick="pickOpt(0,2)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
               </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <div class="hero__wave" aria-hidden="true">
-      <svg viewBox="0 0 1440 72" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-        <path d="M0,36 C240,72 480,0 720,36 C960,72 1200,0 1440,36 L1440,72 L0,72 Z" fill="#F4F7F8"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════
-       SEÇÃO 2: DORES
-  ═══════════════════════════════════ -->
-  <section class="dores" id="dores">
-    <div class="container">
-      <div class="badge fade-up">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.3 3.3L2.8 17.1A2 2 0 0 0 4.6 20h14.8a2 2 0 0 0 1.8-2.9L13.7 3.3a2 2 0 0 0-3.4 0z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
-        VOCÊ SE RECONHECE?
-      </div>
-      <h2 class="section-title fade-up"><span class="mobile-title-line"><span class="title-highlight title-highlight--red">Você</span> se reconhece</span><span class="mobile-title-line"> em alguma dessas situações?</span></h2>
-      <div class="dores__grid">
-
-        <article class="dor-card fade-up">
-          <div class="dor-card__icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F26B1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
-              <line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
-            </svg>
-          </div>
-          <p>Sente fome o tempo todo, mesmo depois de comer</p>
-        </article>
-
-        <article class="dor-card fade-up">
-          <div class="dor-card__icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F26B1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/>
-              <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
-            </svg>
-          </div>
-          <p>Já tentou várias dietas e o peso sempre volta</p>
-        </article>
-
-        <article class="dor-card fade-up">
-          <div class="dor-card__icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F26B1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="10"/>
-              <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
-              <line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
-            </svg>
-          </div>
-          <p>Tem compulsão por doce, principalmente à noite</p>
-        </article>
-
-        <article class="dor-card fade-up">
-          <div class="dor-card__icon" aria-hidden="true">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#F26B1F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-            </svg>
-          </div>
-          <p>Se sente desanimada(o) e sem energia no dia a dia</p>
-        </article>
-
-      </div>
-      <p class="dores__fechamento fade-up">
-        Se você marcou pelo menos uma, a Tirzepatida foi feita para você.
-      </p>
-      <div class="section-cta fade-up">
-        <a
-          href="https://wa.me/554399626440?text=Ol%C3%A1!%20Me%20reconheci%20nessas%20situa%C3%A7%C3%B5es%20e%20quero%20entender%20como%20come%C3%A7ar%20com%20a%20Tirzepatida."
-          class="btn btn--wpp btn--lg btn--pulse btn-magnetic"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="btn__text-mobile">QUERO COMEÇAR</span>
-          <span class="btn__text-desktop">QUERO COMEÇAR MEU EMAGRECIMENTO</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M7 17L17 7"/>
-            <path d="M9 7h8v8"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════
-       SEÇÃO 4: COMO FUNCIONA
-  ═══════════════════════════════════ -->
-  <section class="como-funciona" id="como-funciona">
-    <div class="container">
-      <div class="badge badge--dark fade-up">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 14c3.5-6 8.5-8.5 16-8"/><path d="M5 19c1.5-4.5 5-7 10.5-7.5"/><path d="M9 10l3 3"/><path d="M15 6l3 3"/></svg>
-        COMO FUNCIONA
-      </div>
-      <h2 class="section-title fade-up" style="color:#fff"><span class="mobile-title-line">Como a Tirzepatida <span class="title-highlight title-highlight--green">age</span></span> <span class="mobile-title-line">no seu corpo</span></h2>
-      <div class="passos">
-
-        <div class="passo fade-up">
-          <div class="passo__num" aria-hidden="true">01</div>
-          <div class="passo__body">
-            <h3>Age nos hormônios GLP-1 e GIP</h3>
-            <p>Atua em dois receptores hormonais que regulam diretamente a sensação de fome e saciedade no cérebro.</p>
-          </div>
-        </div>
-
-        <div class="passo__conector" aria-hidden="true"></div>
-
-        <div class="passo fade-up">
-          <div class="passo__num" aria-hidden="true">02</div>
-          <div class="passo__body">
-            <h3>Reduz o apetite naturalmente</h3>
-            <p>O sinal de "estou saciado" chega mais rápido e fica mais tempo. Você come menos pela biologia, não pela força de vontade.</p>
-          </div>
-        </div>
-
-        <div class="passo__conector" aria-hidden="true"></div>
-
-        <div class="passo fade-up">
-          <div class="passo__num" aria-hidden="true">03</div>
-          <div class="passo__body">
-            <h3>O corpo emagrece sem esforço</h3>
-            <p>Com menos calorias entrando de forma natural, o organismo usa as reservas de gordura como energia, e o peso cai de verdade.</p>
-          </div>
-        </div>
-
-      </div>
-      <div class="section-cta section-cta--dark fade-up">
-        <a
-          href="https://wa.me/554399626440?text=Ol%C3%A1!%20Quero%20entender%20como%20a%20Tirzepatida%20pode%20funcionar%20no%20meu%20caso."
-          class="btn btn--wpp btn--lg btn--pulse btn-magnetic"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="btn__text-mobile">TIRAR MINHAS DÚVIDAS</span>
-          <span class="btn__text-desktop">QUERO ENTENDER MEU TRATAMENTO</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M7 17L17 7"/>
-            <path d="M9 7h8v8"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════
-       SEÇÃO 5: DEPOIMENTOS (estilo Google Reviews)
-  ═══════════════════════════════════ -->
-  <section class="depoimentos" id="depoimentos">
-    <div class="container">
-      <div class="badge fade-up">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l2.6 5.3 5.9.9-4.3 4.2 1 5.9L12 16.5l-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L12 3z"/><path d="M12 8v4l2.5 1.5"/></svg>
-        RESULTADOS REAIS
-      </div>
-      <h2 class="section-title fade-up"><span class="mobile-title-line">Quem já começou não</span> <span class="mobile-title-line">quer mais <span class="title-highlight title-highlight--green">parar</span></span></h2>
-
-      <!-- Card resumo Google Rating -->
-      <div class="google-summary fade-up">
-        <div class="google-summary__score">4.9</div>
-        <div class="google-summary__middle">
-          <div class="google-summary__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p>Baseado em<br>avaliações do Google</p>
-        </div>
-        <div class="google-summary__logo" aria-hidden="true">
-          <svg width="30" height="30" viewBox="0 0 24 24">
-            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-          </svg>
-          <span>Google</span>
-        </div>
-      </div>
-  </div><!-- /container -->
-
-  <!-- Carrossel em borda a borda -->
-  <div class="depo-carousel-wrap fade-up">
-    <div class="depo-track" id="depoTrack">
-
-          <article class="depo-card">
-            <div class="depo-card__top">
-              <div class="depo-card__avatar" style="--av:#F26B1F">J</div>
-              <div class="depo-card__meta"><strong>Juliana M.</strong><span>Paciente</span></div>
-              <svg class="depo-card__glogo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            </div>
-            <div class="depo-card__rating"><span class="depo-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="depo-card__time">há 2 meses</span></div>
-            <p class="depo-card__text">Perdi 9kg em 2 meses sem passar fome. Pela primeira vez consegui parar de beliscar à noite. Não acreditava que algo assim era possível para mim.</p>
-          </article>
-
-          <article class="depo-card">
-            <div class="depo-card__top">
-              <div class="depo-card__avatar" style="--av:#4285F4">M</div>
-              <div class="depo-card__meta"><strong>Marcos A.</strong><span>Paciente</span></div>
-              <svg class="depo-card__glogo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            </div>
-            <div class="depo-card__rating"><span class="depo-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="depo-card__time">há 3 meses</span></div>
-            <p class="depo-card__text">Tirou minha vontade de doce completamente. Antes destruía uma barra de chocolate por dia. Hoje passo sem nem lembrar. Não acreditava que era possível.</p>
-          </article>
-
-          <article class="depo-card">
-            <div class="depo-card__top">
-              <div class="depo-card__avatar" style="--av:#34A853">P</div>
-              <div class="depo-card__meta"><strong>Patrícia R.</strong><span>Paciente</span></div>
-              <svg class="depo-card__glogo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            </div>
-            <div class="depo-card__rating"><span class="depo-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="depo-card__time">há 1 mês</span></div>
-            <p class="depo-card__text">Voltei a caber nas minhas roupas antigas. Me olho no espelho de um jeito completamente diferente agora. Valeu cada passo do tratamento.</p>
-          </article>
-
-          <article class="depo-card">
-            <div class="depo-card__top">
-              <div class="depo-card__avatar" style="--av:#EA4335">F</div>
-              <div class="depo-card__meta"><strong>Fernanda C.</strong><span>Paciente</span></div>
-              <svg class="depo-card__glogo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            </div>
-            <div class="depo-card__rating"><span class="depo-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="depo-card__time">há 6 semanas</span></div>
-            <p class="depo-card__text">Depois de tentar tudo sem sucesso, finalmente vi o ponteiro da balança andar. 7kg em 6 semanas. Nem parece real, mas tá na balança.</p>
-          </article>
-
-          <article class="depo-card">
-            <div class="depo-card__top">
-              <div class="depo-card__avatar" style="--av:#9C27B0">R</div>
-              <div class="depo-card__meta"><strong>Roberto S.</strong><span>Paciente</span></div>
-              <svg class="depo-card__glogo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            </div>
-            <div class="depo-card__rating"><span class="depo-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="depo-card__time">há 2 meses</span></div>
-            <p class="depo-card__text">A saciedade que esse tratamento dá é diferente de tudo que já tentei. Como menos e me sinto mais satisfeito. E o melhor: sem esforço nenhum.</p>
-          </article>
-
-          <article class="depo-card">
-            <div class="depo-card__top">
-              <div class="depo-card__avatar" style="--av:#0B6B7A">A</div>
-              <div class="depo-card__meta"><strong>Ana L.</strong><span>Paciente</span></div>
-              <svg class="depo-card__glogo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            </div>
-            <div class="depo-card__rating"><span class="depo-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="depo-card__time">há 4 meses</span></div>
-            <p class="depo-card__text">Nunca pensei que conseguiria largar a compulsão por doce à noite. Com a Tirzepatida, simplesmente parou. É como se a chave tivesse virado.</p>
-          </article>
-
-          <article class="depo-card">
-            <div class="depo-card__top">
-              <div class="depo-card__avatar" style="--av:#FF8F00">C</div>
-              <div class="depo-card__meta"><strong>Carlos M.</strong><span>Paciente</span></div>
-              <svg class="depo-card__glogo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            </div>
-            <div class="depo-card__rating"><span class="depo-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="depo-card__time">há 5 meses</span></div>
-            <p class="depo-card__text">Cinco meses de tratamento e 18kg a menos. A energia que voltou na minha vida é indescritível. Me sinto 10 anos mais novo, sem exagero.</p>
-          </article>
-
-          <article class="depo-card">
-            <div class="depo-card__top">
-              <div class="depo-card__avatar" style="--av:#E91E63">B</div>
-              <div class="depo-card__meta"><strong>Beatriz N.</strong><span>Paciente</span></div>
-              <svg class="depo-card__glogo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            </div>
-            <div class="depo-card__rating"><span class="depo-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="depo-card__time">há 6 semanas</span></div>
-            <p class="depo-card__text">Em 6 semanas senti a diferença real. A fome ficou mais fácil de controlar e a ansiedade por comida praticamente sumiu do meu dia a dia.</p>
-          </article>
-
-          <article class="depo-card">
-            <div class="depo-card__top">
-              <div class="depo-card__avatar" style="--av:#4285F4">T</div>
-              <div class="depo-card__meta"><strong>Thiago O.</strong><span>Paciente</span></div>
-              <svg class="depo-card__glogo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            </div>
-            <div class="depo-card__rating"><span class="depo-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="depo-card__time">há 3 meses</span></div>
-            <p class="depo-card__text">Indicaria para todo mundo preso nesse ciclo de dieta e frustração. Aqui é diferente de verdade. Não é força de vontade, é ciência funcionando.</p>
-          </article>
-
-          <article class="depo-card">
-            <div class="depo-card__top">
-              <div class="depo-card__avatar" style="--av:#34A853">L</div>
-              <div class="depo-card__meta"><strong>Larissa P.</strong><span>Paciente</span></div>
-              <svg class="depo-card__glogo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            </div>
-            <div class="depo-card__rating"><span class="depo-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="depo-card__time">há 3 meses</span></div>
-            <p class="depo-card__text">Três meses de tratamento e 12kg a menos. Minha médica ficou impressionada com a evolução. Eu mesmo não acreditei quando vi os números.</p>
-          </article>
-
-          <article class="depo-card">
-            <div class="depo-card__top">
-              <div class="depo-card__avatar" style="--av:#F26B1F">E</div>
-              <div class="depo-card__meta"><strong>Eduardo K.</strong><span>Paciente</span></div>
-              <svg class="depo-card__glogo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            </div>
-            <div class="depo-card__rating"><span class="depo-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="depo-card__time">há 4 meses</span></div>
-            <p class="depo-card__text">O que mais me surpreendeu foi a ausência da fome compulsiva à tarde. Antes era impossível não beliscar. Agora passo a tarde tranquilo sem pensar em comida.</p>
-          </article>
-
-          <article class="depo-card">
-            <div class="depo-card__top">
-              <div class="depo-card__avatar" style="--av:#EA4335">C</div>
-              <div class="depo-card__meta"><strong>Camila F.</strong><span>Paciente</span></div>
-              <svg class="depo-card__glogo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            </div>
-            <div class="depo-card__rating"><span class="depo-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="depo-card__time">há 7 semanas</span></div>
-            <p class="depo-card__text">Resultado real, sem sofrimento. Finalmente entendi que o problema não era falta de disciplina, era biológico. A Tirzepatida resolveu o que eu não conseguia sozinha.</p>
-          </article>
-
-        </div>
-
-        <!-- Setas (mobile) -->
-        <div class="depo-nav" aria-label="Navegação dos depoimentos">
-          <button class="depo-nav__btn" id="depoPrev" aria-label="Depoimento anterior">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-          </button>
-          <button class="depo-nav__btn" id="depoNext" aria-label="Próximo depoimento">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
-        </div>
-      </div>
-      <div class="section-cta fade-up">
-        <a
-          href="https://wa.me/554399626440?text=Ol%C3%A1!%20Vi%20os%20resultados%20e%20quero%20saber%20como%20come%C3%A7ar%20meu%20emagrecimento."
-          class="btn btn--wpp btn--lg btn--pulse btn-magnetic"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="btn__text-mobile">QUERO RESULTADOS</span>
-          <span class="btn__text-desktop">QUERO TER RESULTADOS TAMBÉM</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M7 17L17 7"/>
-            <path d="M9 7h8v8"/>
-          </svg>
-        </a>
-      </div>
-  </section>
-
-  <!-- ═══════════════════════════════════
-       SEÇÃO 6: URGÊNCIA + OFERTA
-  ═══════════════════════════════════ -->
-  <section class="urgencia" id="urgencia">
-    <div class="urg-bg" aria-hidden="true">
-      <div class="urg-bg__orb urg-bg__orb--1"></div>
-      <div class="urg-bg__orb urg-bg__orb--2"></div>
-    </div>
-
-    <div class="container">
-      <div class="urgencia__inner fade-up">
-
-        <div class="urgencia__panel">
-
-          <div class="badge badge--dark">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/><path d="M9 12h6"/><path d="M9 16h4"/></svg>
-            ESTOQUE QUASE ESGOTADO EM MAIO
-          </div>
-
-          <h2><span class="mobile-title-line">Garanta o seu antes</span> <span class="mobile-title-line">de <span class="title-highlight title-highlight--red">acabar</span></span></h2>
-          <p>Cada lote é limitado. Quando as unidades do mês acabam, a próxima reposição leva semanas. Não perca mais tempo.</p>
-
-          <div class="urgencia__divider" aria-hidden="true">
-            <span>ESTA OFERTA EXPIRA EM</span>
-          </div>
-
-          <div class="countdown" id="countdown" aria-label="Tempo restante da oferta">
-            <div class="countdown__unit">
-              <div class="countdown__card">
-                <span class="countdown__num" id="cd-hours">23</span>
-                <span class="countdown__card-label">HORAS</span>
+              <span class="opt__label">Mais de 20 kg</span>
+            </button>
+            <button class="opt" onclick="pickOpt(0,3)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
               </div>
-            </div>
-            <span class="countdown__sep" aria-hidden="true">:</span>
-            <div class="countdown__unit">
-              <div class="countdown__card">
-                <span class="countdown__num" id="cd-minutes">59</span>
-                <span class="countdown__card-label">MINUTOS</span>
+              <span class="opt__label">Ainda não sei</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="slide" id="q1">
+          <span class="q__tag">Pergunta 2</span>
+          <p class="q__text">Há quanto tempo tenta emagrecer?</p>
+          <div class="options">
+            <button class="opt" onclick="pickOpt(1,0)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
               </div>
-            </div>
-            <span class="countdown__sep" aria-hidden="true">:</span>
-            <div class="countdown__unit">
-              <div class="countdown__card">
-                <span class="countdown__num" id="cd-seconds">59</span>
-                <span class="countdown__card-label">SEGUNDOS</span>
+              <span class="opt__label">Menos de 1 ano</span>
+            </button>
+            <button class="opt" onclick="pickOpt(1,1)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
               </div>
+              <span class="opt__label">1 a 3 anos</span>
+            </button>
+            <button class="opt" onclick="pickOpt(1,2)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+              </div>
+              <span class="opt__label">Mais de 3 anos</span>
+            </button>
+            <button class="opt" onclick="pickOpt(1,3)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <span class="opt__label">A vida toda</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="slide" id="q2">
+          <span class="q__tag">Pergunta 3</span>
+          <p class="q__text">Já tentou algum método para emagrecer?</p>
+          <div class="options">
+            <button class="opt" onclick="pickOpt(2,0)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+              </div>
+              <span class="opt__label">Nunca tentei</span>
+            </button>
+            <button class="opt" onclick="pickOpt(2,1)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <span class="opt__label">Dietas e exercícios</span>
+            </button>
+            <button class="opt" onclick="pickOpt(2,2)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
+              </div>
+              <span class="opt__label">Remédios ou suplementos</span>
+            </button>
+            <button class="opt" onclick="pickOpt(2,3)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <span class="opt__label">Vários métodos sem sucesso</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="slide" id="q3">
+          <span class="q__tag">Pergunta 4</span>
+          <p class="q__text">Qual é seu maior obstáculo?</p>
+          <div class="options">
+            <button class="opt" onclick="pickOpt(3,0)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              </div>
+              <span class="opt__label">Fome constante</span>
+            </button>
+            <button class="opt" onclick="pickOpt(3,1)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <span class="opt__label">Compulsão alimentar</span>
+            </button>
+            <button class="opt" onclick="pickOpt(3,2)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <span class="opt__label">Metabolismo lento</span>
+            </button>
+            <button class="opt" onclick="pickOpt(3,3)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><circle cx="12" cy="12" r="10"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+              </div>
+              <span class="opt__label">Ansiedade e estresse</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="slide" id="q4">
+          <span class="q__tag">Pergunta 5</span>
+          <p class="q__text">Quando você quer começar o tratamento?</p>
+          <div class="options">
+            <button class="opt" onclick="pickOpt(4,0)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <span class="opt__label">Quero começar agora</span>
+            </button>
+            <button class="opt" onclick="pickOpt(4,1)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <span class="opt__label">Nos próximos dias</span>
+            </button>
+            <button class="opt" onclick="pickOpt(4,2)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <span class="opt__label">Neste mês</span>
+            </button>
+            <button class="opt" onclick="pickOpt(4,3)">
+              <div class="opt__icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <span class="opt__label">Ainda estou avaliando</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- LOADING -->
+        <div class="slide" id="loading">
+          <div class="loading-wrap">
+            <svg class="lring" viewBox="0 0 68 68">
+              <circle class="track" cx="34" cy="34" r="28"/>
+              <circle class="arc"   cx="34" cy="34" r="28"/>
+            </svg>
+            <p class="loading-title">Analisando seu perfil<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
+            <p class="loading-sub">Verificando compatibilidade com o tratamento</p>
+          </div>
+        </div>
+
+        <!-- RESULT -->
+        <div class="slide" id="result">
+          <div class="result-wrap">
+            <div class="result-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             </div>
-          </div>
-
-          <a
-            href="https://wa.me/554399626440?text=Ol%C3%A1!%20Quero%20garantir%20minha%20Tirzepatida%20antes%20do%20estoque%20acabar.%20Pode%20me%20passar%20as%20op%C3%A7%C3%B5es%3F"
-            class="btn btn--wpp btn--lg btn--pulse btn-magnetic"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-            <span class="btn__text-mobile">GARANTIR MINHA VAGA</span>
-            <span class="btn__text-desktop">QUERO GARANTIR MEU EMAGRECIMENTO</span>
-          </a>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════
-       SEÇÃO 7: ENTREGA
-  ═══════════════════════════════════ -->
-  <section class="entrega" id="entrega">
-    <div class="container">
-      <div class="entrega__inner">
-        <div class="entrega__content fade-left">
-          <div class="badge">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="M3.3 7 12 12l8.7-5"/><path d="M12 22V12"/></svg>
-            ENTREGA SEGURA
-          </div>
-          <h2 class="section-title"><span class="mobile-title-line">Veja como seu</span> <span class="mobile-title-line"><span class="title-highlight title-highlight--green">produto chega</span></span></h2>
-          <p>Seu pedido é preparado com cuidado, protegido para o transporte e acompanhado pelo nosso atendimento no WhatsApp.</p>
-        </div>
-
-        <div class="entrega__video-wrap fade-right">
-          <video class="entrega__video" src="entrega-zenthra.mp4" controls playsinline preload="metadata"></video>
-          <div class="entrega__video-hint" aria-hidden="true">
-            <span>Clique para assistir</span>
+            <div class="result-badge">
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              PERFIL APROVADO
+            </div>
+            <h2 class="result-title">Você tem perfil para<br>o tratamento!</h2>
+            <p class="result-sub" id="resultSub">Com base nas suas respostas, a Tirzepatida pode ser exatamente o que você precisa para emagrecer com mais leveza e menos esforço.</p>
+            <ul class="result-points">
+              <li>
+                <svg class="ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Reduz a fome em até 70%
+              </li>
+              <li>
+                <svg class="ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Elimina a compulsão alimentar
+              </li>
+              <li>
+                <svg class="ck" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Atendimento humano pelo WhatsApp
+              </li>
+            </ul>
+            <a href="lp.html?ref=quiz" class="btn-go">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              VER COMO FUNCIONA O PRODUTO
+            </a>
+            <span class="btn-go__sub">Atendimento pelo WhatsApp em até 5 minutos</span>
           </div>
         </div>
 
-        <div class="entrega__details fade-left">
-          <ul class="entrega__list" aria-label="Cuidados na entrega">
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              Embalagem protegida
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              Envio discreto
-            </li>
-            <li>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-              Suporte humano pelo WhatsApp
-            </li>
-          </ul>
-          <a
-            href="https://wa.me/554399626440?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20e%20quero%20comprar%20Tirzepatida.%20Pode%20me%20passar%20valores%20e%20disponibilidade%3F"
-            class="btn btn--wpp btn--pulse entrega__cta"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Quero receber com segurança
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M7 17L17 7"/>
-              <path d="M9 7h8v8"/>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+      </div><!-- /.slides -->
+    </div><!-- /.qcard -->
 
-  <!-- ═══════════════════════════════════
-       SEÇÃO 7: FAQ
-  ═══════════════════════════════════ -->
-  <section class="faq" id="faq">
-    <div class="container">
-      <div class="badge fade-up">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5.5A6.5 6.5 0 0 1 16.5 4L20 7.5v8A3.5 3.5 0 0 1 16.5 19H8l-4 2 1.2-4.2A6.5 6.5 0 0 1 5 5.5z"/><path d="M10 9h4"/><path d="M10 13h2.5"/></svg>
-        DÚVIDAS FREQUENTES
-      </div>
-      <h2 class="section-title fade-up">Perguntas <span class="title-highlight title-highlight--green">frequentes</span></h2>
-      <div class="faq__list" role="list">
+    <p class="qfoot">
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      100% gratuito e seguro — sem spam
+    </p>
 
-        <div class="faq__item fade-up" role="listitem">
-          <button class="faq__btn" aria-expanded="false" aria-controls="faq-1">
-            Tirzepatida é seguro?
-            <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
-          </button>
-          <div class="faq__panel" id="faq-1" role="region" hidden>
-            <p>Sim. Tirzepatida é um medicamento com ampla base de estudos clínicos, aprovado por agências regulatórias internacionais. Como qualquer medicamento, deve ser usado com prescrição e acompanhamento médico. Quer tirar dúvidas com nosso especialista? <a href="https://wa.me/554399626440?text=Ol%C3%A1!%20Tenho%20interesse%20em%20comprar%20Tirzepatida%20e%20quero%20entender%20melhor%20as%20op%C3%A7%C3%B5es%20dispon%C3%ADveis." target="_blank" rel="noopener">Fale agora pelo WhatsApp &rarr;</a></p>
-          </div>
-        </div>
+  </main>
 
-        <div class="faq__item fade-up" role="listitem">
-          <button class="faq__btn" aria-expanded="false" aria-controls="faq-2">
-            Em quanto tempo vou ver resultado?
-            <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
-          </button>
-          <div class="faq__panel" id="faq-2" role="region" hidden>
-            <p>A maioria das pessoas nota redução do apetite já nas primeiras semanas. Resultados visíveis na balança costumam aparecer a partir do primeiro mês. Os melhores resultados se consolidam ao longo do tratamento. Quer saber o que esperar no seu caso? <a href="https://wa.me/554399626440?text=Ol%C3%A1!%20Quero%20comprar%20Tirzepatida%20e%20saber%20qual%20op%C3%A7%C3%A3o%20%C3%A9%20mais%20indicada%20para%20come%C3%A7ar." target="_blank" rel="noopener">Fale agora pelo WhatsApp &rarr;</a></p>
-          </div>
-        </div>
-
-        <div class="faq__item fade-up" role="listitem">
-          <button class="faq__btn" aria-expanded="false" aria-controls="faq-3">
-            Preciso fazer dieta junto?
-            <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
-          </button>
-          <div class="faq__panel" id="faq-3" role="region" hidden>
-            <p>Não existe regra rígida. Alimentação equilibrada favorece e potencializa os resultados, mas o ponto positivo é que, com a fome reduzida, comer melhor fica muito mais fácil. Você não precisa de força de vontade; a Tirzepatida auxilia nessa parte. Tem dúvidas? <a href="https://wa.me/554399626440?text=Ol%C3%A1!%20Quero%20comprar%20Tirzepatida.%20Pode%20me%20enviar%20valores%2C%20formas%20de%20pagamento%20e%20disponibilidade%3F" target="_blank" rel="noopener">Fale pelo WhatsApp &rarr;</a></p>
-          </div>
-        </div>
-
-        <div class="faq__item fade-up" role="listitem">
-          <button class="faq__btn" aria-expanded="false" aria-controls="faq-4">
-            Tem efeito rebote depois?
-            <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
-          </button>
-          <div class="faq__panel" id="faq-4" role="region" hidden>
-            <p>O peso perdido durante o tratamento se mantém enquanto os hábitos adquiridos são preservados. Com a fome controlada, criar novos hábitos fica muito mais simples. A saída do tratamento é feita de forma gradual, com orientação médica. Quer entender melhor? <a href="https://wa.me/554399626440?text=Ol%C3%A1!%20Tenho%20interesse%20na%20Tirzepatida%20e%20quero%20garantir%20minha%20unidade.%20Como%20fa%C3%A7o%20para%20comprar%3F" target="_blank" rel="noopener">Fale agora &rarr;</a></p>
-          </div>
-        </div>
-
-        <div class="faq__item fade-up" role="listitem">
-          <button class="faq__btn" aria-expanded="false" aria-controls="faq-5">
-            Como funciona a aplicação?
-            <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
-          </button>
-          <div class="faq__panel" id="faq-5" role="region" hidden>
-            <p>A aplicação é subcutânea (sob a pele), geralmente uma vez por semana, em locais como abdômen, coxa ou braço. A agulha é fina e o procedimento é simples. Nosso time orienta você em cada passo. Ficou alguma dúvida? <a href="https://wa.me/554399626440?text=Ol%C3%A1!%20Quero%20comprar%20Tirzepatida%20e%20receber%20as%20informa%C3%A7%C3%B5es%20para%20fazer%20meu%20pedido." target="_blank" rel="noopener">Fale com a gente &rarr;</a></p>
-          </div>
-        </div>
-
-        <div class="faq__item fade-up" role="listitem">
-          <button class="faq__btn" aria-expanded="false" aria-controls="faq-6">
-            Preciso de receita médica?
-            <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
-          </button>
-          <div class="faq__panel" id="faq-6" role="region" hidden>
-            <p>Sim. A Tirzepatida deve ser usada com prescrição e acompanhamento profissional. Nosso atendimento tira suas dúvidas iniciais e orienta o caminho correto para começar com segurança. <a href="https://wa.me/554399626440?text=Ol%C3%A1!%20Quero%20comprar%20Tirzepatida.%20Pode%20me%20passar%20as%20op%C3%A7%C3%B5es%20dispon%C3%ADveis%20hoje%3F" target="_blank" rel="noopener">Fale pelo WhatsApp &rarr;</a></p>
-          </div>
-        </div>
-
-        <div class="faq__item fade-up" role="listitem">
-          <button class="faq__btn" aria-expanded="false" aria-controls="faq-7">
-            A Tirzepatida corta totalmente a fome?
-            <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
-          </button>
-          <div class="faq__panel" id="faq-7" role="region" hidden>
-            <p>O objetivo não é zerar a fome, e sim ajudar no controle do apetite e da saciedade. Assim, comer por impulso tende a ficar mais fácil de controlar durante o tratamento. <a href="https://wa.me/554399626440?text=Ol%C3%A1!%20Tenho%20interesse%20em%20comprar%20Tirzepatida%20para%20emagrecimento.%20Pode%20me%20atender%3F" target="_blank" rel="noopener">Tirar dúvidas agora &rarr;</a></p>
-          </div>
-        </div>
-
-        <div class="faq__item fade-up" role="listitem">
-          <button class="faq__btn" aria-expanded="false" aria-controls="faq-8">
-            Posso usar se já tomo outros medicamentos?
-            <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
-          </button>
-          <div class="faq__panel" id="faq-8" role="region" hidden>
-            <p>Depende do seu histórico de saúde e dos medicamentos em uso. Por isso, a avaliação profissional é indispensável antes de iniciar. Nossa equipe pode entender seu caso e orientar os próximos passos. <a href="https://wa.me/554399626440?text=Ol%C3%A1!%20Quero%20comprar%20Tirzepatida%20e%20gostaria%20de%20ver%20valores%20e%20condi%C3%A7%C3%B5es." target="_blank" rel="noopener">Conversar com a equipe &rarr;</a></p>
-          </div>
-        </div>
-
-        <div class="faq__item fade-up" role="listitem">
-          <button class="faq__btn" aria-expanded="false" aria-controls="faq-9">
-            O tratamento tem acompanhamento?
-            <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
-          </button>
-          <div class="faq__panel" id="faq-9" role="region" hidden>
-            <p>Sim. Você recebe orientação para iniciar, aplicar corretamente e acompanhar sua evolução ao longo das semanas. O atendimento é feito de forma simples e humanizada pelo WhatsApp. <a href="https://wa.me/554399626440?text=Ol%C3%A1!%20Quero%20garantir%20minha%20Tirzepatida%20com%20voc%C3%AAs.%20Pode%20me%20mostrar%20as%20op%C3%A7%C3%B5es%3F" target="_blank" rel="noopener">Ver como funciona &rarr;</a></p>
-          </div>
-        </div>
-
-        <div class="faq__item fade-up" role="listitem">
-          <button class="faq__btn" aria-expanded="false" aria-controls="faq-10">
-            Como recebo o produto?
-            <svg class="faq__chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <polyline points="6 9 12 15 18 9"/>
-            </svg>
-          </button>
-          <div class="faq__panel" id="faq-10" role="region" hidden>
-            <p>Depois da confirmação do atendimento, nossa equipe informa as opções de envio, prazo e cuidados de recebimento. Tudo é combinado diretamente pelo WhatsApp para você acompanhar com tranquilidade. <a href="https://wa.me/554399626440?text=Ol%C3%A1!%20Quero%20comprar%20Tirzepatida%20e%20saber%20as%20op%C3%A7%C3%B5es%20de%20entrega%20e%20pagamento." target="_blank" rel="noopener">Consultar envio &rarr;</a></p>
-          </div>
-        </div>
-
-      </div>
-      <div class="section-cta fade-up">
-        <a
-          href="https://wa.me/554399626440?text=Ol%C3%A1!%20Li%20as%20perguntas%20frequentes%20e%20quero%20tirar%20minhas%20d%C3%BAvidas%20sobre%20a%20Tirzepatida."
-          class="btn btn--wpp btn--lg btn--pulse btn-magnetic"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span class="btn__text-mobile">TIRAR DÚVIDAS</span>
-          <span class="btn__text-desktop">TIRAR MINHAS DÚVIDAS NO WHATSAPP</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M7 17L17 7"/>
-            <path d="M9 7h8v8"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════
-       SEÇÃO 8: CTA FINAL
-  ═══════════════════════════════════ -->
-  <section class="cta-final" id="cta-final">
-    <div class="cta-final__orb cta-final__orb--1" aria-hidden="true"></div>
-    <div class="cta-final__orb cta-final__orb--2" aria-hidden="true"></div>
-
-    <div class="container">
-      <div class="cta-final__inner fade-up">
-
-        <div class="badge badge--dark">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4l-4 3v-3H7a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="M9 9h6"/><path d="M9 13h4"/><path d="M16.5 7.5l1.5-1.5"/></svg>
-          ATENDIMENTO HUMANO PELO WHATSAPP
-        </div>
-
-        <h2>
-          Sua melhor versão está<br>
-          a um <span class="cta-final__highlight title-highlight title-highlight--green">clique</span> de distância
-        </h2>
-
-        <p>Pare de adiar. Cada semana que passa é mais uma semana longe do corpo que você merece.</p>
-
-        <div class="cta-final__btn-wrap">
-          <div class="cta-final__glow" aria-hidden="true"></div>
-          <a
-            href="https://wa.me/554399626440?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20e%20quero%20comprar%20Tirzepatida.%20Pode%20me%20passar%20valores%20e%20disponibilidade%3F"
-            class="btn btn--wpp btn--lg btn--pulse btn-magnetic"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-            <span class="btn__text-mobile">QUERO EMAGRECER</span>
-            <span class="btn__text-desktop">QUERO EMAGRECER A PARTIR DE HOJE</span>
-          </a>
-        </div>
-
-        <ul class="cta-final__trust" aria-label="Garantias">
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Atendimento humano rápido
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Compra simples pelo WhatsApp
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-            Sem contrato ou fidelidade
-          </li>
-        </ul>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ═══════════════════════════════════
-       SEÇÃO 9: FOOTER
-  ═══════════════════════════════════ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <a href="#hero" class="footer__brand" aria-label="Voltar ao topo">
-          <img src="logozenthra.PNG" alt="" aria-hidden="true">
-          <span>Zenthra Pharma</span>
-        </a>
-        <p class="footer__dev">Desenvolvido por Nicolas Dev</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- ═══════════════════════════════════
-       BOTÃO FLUTUANTE WHATSAPP
-  ═══════════════════════════════════ -->
-  <a
-    href="https://wa.me/554399626440?text=Ol%C3%A1!%20Vim%20pela%20p%C3%A1gina%20e%20quero%20comprar%20Tirzepatida.%20Pode%20me%20passar%20valores%20e%20disponibilidade%3F"
-    class="wpp-fab"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Falar pelo WhatsApp"
-    id="wpp-fab"
-  >
-    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-    </svg>
-  </a>
-
-  <script src="script.js"></script>
-
-  <!-- Quiz funnel: adapta hero para quem vem do quiz -->
   <script>
-    (function () {
-      if (!new URLSearchParams(window.location.search).has('ref')) return;
+    const answers = [];
+    const totalQ = 5;
 
-      /* Troca o badge do hero */
-      var badge = document.querySelector('.hero__content .badge');
-      if (badge) {
-        badge.innerHTML =
-          '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>' +
-          ' PERFIL APROVADO';
-      }
+    const obstacleMessages = [
+      'A fome constante tem origem hormonal. A Tirzepatida age direto nos receptores GLP-1 e GIP, reduzindo o apetite em até 70% nas primeiras semanas.',
+      'A compulsão alimentar é regulada pelos mesmos hormônios que a Tirzepatida equilibra. Pacientes relatam queda brusca no desejo por comida já no início do tratamento.',
+      'Metabolismo lento está ligado à resistência hormonal. A Tirzepatida reequilibra o metabolismo energético, facilitando a queima de gordura mesmo em repouso.',
+      'A ansiedade eleva o cortisol e gera fome emocional. A Tirzepatida regula esse ciclo hormonal, reduzindo a vontade de comer por estresse.'
+    ];
 
-      /* Troca o subtítulo do hero */
-      var sub = document.querySelector('.hero__subheadline');
-      if (sub) {
-        sub.innerHTML = 'Seu perfil foi analisado. Veja agora como a<br>Tirzepatida resolve exatamente o seu caso.';
-      }
+    function pickOpt(q, opt) {
+      const btns = document.querySelectorAll('#q' + q + ' .opt');
+      btns.forEach(b => b.classList.remove('selected'));
+      btns[opt].classList.add('selected');
+      answers[q] = opt;
 
-      /* Adiciona banner de confirmação logo após o hero */
-      var hero = document.getElementById('hero');
-      if (hero) {
-        var bar = document.createElement('div');
-        bar.className = 'quiz-confirm-bar';
-        bar.innerHTML =
-          '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>' +
-          ' Você concluiu a análise de perfil — <strong>agora veja o passo a passo do tratamento</strong>';
-        hero.insertAdjacentElement('afterend', bar);
-      }
-    })();
+      setTimeout(() => {
+        if (q < totalQ - 1) {
+          goTo(q + 1);
+        } else {
+          showLoading();
+        }
+      }, 380);
+    }
+
+    function goTo(idx) {
+      document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+      document.getElementById('q' + idx).classList.add('active');
+      const pct = ((idx + 1) / totalQ) * 100;
+      document.getElementById('progressFill').style.width = pct + '%';
+      document.getElementById('stepLabel').textContent = 'Pergunta ' + (idx + 1) + ' de ' + totalQ;
+    }
+
+    function showLoading() {
+      document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+      document.getElementById('loading').classList.add('active');
+      document.getElementById('progressWrap').style.visibility = 'hidden';
+      setTimeout(showResult, 2500);
+    }
+
+    function showResult() {
+      const obstacleIdx = answers[3] ?? 0;
+      document.getElementById('resultSub').textContent = obstacleMessages[obstacleIdx];
+
+      document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+      document.getElementById('result').classList.add('active');
+    }
   </script>
+
 </body>
 </html>
-
-
-
